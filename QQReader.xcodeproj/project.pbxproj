@@ -1,0 +1,989 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F1FF18D1DF7BD5300C77CDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF18C1DF7BD5300C77CDE /* AppDelegate.swift */; };
+		5F1FF1921DF7BD5300C77CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1901DF7BD5300C77CDE /* Main.storyboard */; };
+		5F1FF1941DF7BD5300C77CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1931DF7BD5300C77CDE /* Assets.xcassets */; };
+		5F1FF1971DF7BD5300C77CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1951DF7BD5300C77CDE /* LaunchScreen.storyboard */; };
+		5F1FF1A21DF7BD5300C77CDE /* QQReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1A11DF7BD5300C77CDE /* QQReaderTests.swift */; };
+		5F1FF1AD1DF7BD5300C77CDE /* QQReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1AC1DF7BD5300C77CDE /* QQReaderUITests.swift */; };
+		5F1FF1C61DF7C43F00C77CDE /* LFJCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1C11DF7C43F00C77CDE /* LFJCircleProgressView.m */; };
+		5F1FF1C71DF7C43F00C77CDE /* LFJLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1C31DF7C43F00C77CDE /* LFJLoadingView.m */; };
+		5F1FF1C81DF7C43F00C77CDE /* ZJDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1C51DF7C43F00C77CDE /* ZJDrawerController.m */; };
+		5F1FF1E01DF7C5FF00C77CDE /* BookShelvesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1DF1DF7C5FF00C77CDE /* BookShelvesViewController.swift */; };
+		5F1FF1E21DF7C61500C77CDE /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1E11DF7C61500C77CDE /* SelectionViewController.swift */; };
+		5F1FF1E41DF7C61E00C77CDE /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1E31DF7C61E00C77CDE /* StackViewController.swift */; };
+		5F1FF1E61DF7C98B00C77CDE /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1E51DF7C98B00C77CDE /* DiscoverViewController.swift */; };
+		5F1FF1EC1DF7CC3400C77CDE /* BaseTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1EB1DF7CC3400C77CDE /* BaseTheme.swift */; };
+		5F1FF1EE1DF7CDE400C77CDE /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1ED1DF7CDE400C77CDE /* LeftViewController.swift */; };
+		5F1FF1F01DF7CE0000C77CDE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1EF1DF7CE0000C77CDE /* MainTabBarController.swift */; };
+		5F1FF1F31DF7DDFA00C77CDE /* left_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1F21DF7DDFA00C77CDE /* left_setting.png */; };
+		5F1FF1F51DF7DE4500C77CDE /* left_moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1F41DF7DE4500C77CDE /* left_moon.png */; };
+		5F1FF1F71DF7DEF000C77CDE /* left_jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1F61DF7DEF000C77CDE /* left_jiantou.png */; };
+		5F1FF1F91DF7DFB200C77CDE /* left_horn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1F81DF7DFB200C77CDE /* left_horn.png */; };
+		5F1FF1FB1DF7E42500C77CDE /* LeftTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1FA1DF7E42500C77CDE /* LeftTVCell.swift */; };
+		5F1FF1FD1DF7E67700C77CDE /* NSobjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FF1FC1DF7E67700C77CDE /* NSobjectExtension.swift */; };
+		5F1FF2031DF7ED2200C77CDE /* left_baoyue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1FE1DF7ED2200C77CDE /* left_baoyue.png */; };
+		5F1FF2041DF7ED2200C77CDE /* left_lishi.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF1FF1DF7ED2200C77CDE /* left_lishi.png */; };
+		5F1FF2051DF7ED2200C77CDE /* left_liwu.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF2001DF7ED2200C77CDE /* left_liwu.png */; };
+		5F1FF2061DF7ED2200C77CDE /* left_xiaoxi.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF2011DF7ED2200C77CDE /* left_xiaoxi.png */; };
+		5F1FF2071DF7ED2200C77CDE /* left_zhanghu.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF2021DF7ED2200C77CDE /* left_zhanghu.png */; };
+		5F1FF2091DF7F3FA00C77CDE /* head.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1FF2081DF7F3FA00C77CDE /* head.jpg */; };
+		5F4AE5171DF8066100BF557F /* icon_small_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4AE5161DF8066100BF557F /* icon_small_mask.png */; };
+		5F4AE5191DF8087E00BF557F /* notification_icon_newbie_present@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4AE5181DF8087E00BF557F /* notification_icon_newbie_present@2x.png */; };
+		5F4AE51B1DF80D1E00BF557F /* BookShelvesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4AE51A1DF80D1E00BF557F /* BookShelvesTVCell.swift */; };
+		5F4AE51D1DF80E1700BF557F /* 150.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5F4AE51C1DF80E1700BF557F /* 150.jpeg */; };
+		5F4E26681DFE98F30083B413 /* feedflow_refresh_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E26671DFE98F30083B413 /* feedflow_refresh_bg@3x.png */; };
+		5F945B881DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */; };
+		5F945B911DFE44D800ACA1E1 /* 2342.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F945B901DFE44D800ACA1E1 /* 2342.m */; };
+		949E1860568574CB825F89F9 /* Pods_QQReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970876D4178D94DF41DB6784 /* Pods_QQReader.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F1FF19E1DF7BD5300C77CDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1FF1811DF7BD5300C77CDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F1FF1881DF7BD5300C77CDE;
+			remoteInfo = QQReader;
+		};
+		5F1FF1A91DF7BD5300C77CDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1FF1811DF7BD5300C77CDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F1FF1881DF7BD5300C77CDE;
+			remoteInfo = QQReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F1FF1891DF7BD5300C77CDE /* QQReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1FF18C1DF7BD5300C77CDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../QQReader/AppDelegate.swift; sourceTree = "<group>"; };
+		5F1FF1911DF7BD5300C77CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5F1FF1931DF7BD5300C77CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F1FF1961DF7BD5300C77CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5F1FF1981DF7BD5300C77CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1FF19D1DF7BD5300C77CDE /* QQReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QQReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1FF1A11DF7BD5300C77CDE /* QQReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQReaderTests.swift; sourceTree = "<group>"; };
+		5F1FF1A31DF7BD5300C77CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1FF1A81DF7BD5300C77CDE /* QQReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QQReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1FF1AC1DF7BD5300C77CDE /* QQReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQReaderUITests.swift; sourceTree = "<group>"; };
+		5F1FF1AE1DF7BD5300C77CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1FF1C01DF7C43F00C77CDE /* LFJCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFJCircleProgressView.h; sourceTree = "<group>"; };
+		5F1FF1C11DF7C43F00C77CDE /* LFJCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFJCircleProgressView.m; sourceTree = "<group>"; };
+		5F1FF1C21DF7C43F00C77CDE /* LFJLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFJLoadingView.h; sourceTree = "<group>"; };
+		5F1FF1C31DF7C43F00C77CDE /* LFJLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFJLoadingView.m; sourceTree = "<group>"; };
+		5F1FF1C41DF7C43F00C77CDE /* ZJDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJDrawerController.h; sourceTree = "<group>"; };
+		5F1FF1C51DF7C43F00C77CDE /* ZJDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJDrawerController.m; sourceTree = "<group>"; };
+		5F1FF1DF1DF7C5FF00C77CDE /* BookShelvesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShelvesViewController.swift; sourceTree = "<group>"; };
+		5F1FF1E11DF7C61500C77CDE /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		5F1FF1E31DF7C61E00C77CDE /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		5F1FF1E51DF7C98B00C77CDE /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		5F1FF1EA1DF7CB9B00C77CDE /* Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		5F1FF1EB1DF7CC3400C77CDE /* BaseTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTheme.swift; sourceTree = "<group>"; };
+		5F1FF1ED1DF7CDE400C77CDE /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		5F1FF1EF1DF7CE0000C77CDE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5F1FF1F21DF7DDFA00C77CDE /* left_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_setting.png; sourceTree = "<group>"; };
+		5F1FF1F41DF7DE4500C77CDE /* left_moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_moon.png; sourceTree = "<group>"; };
+		5F1FF1F61DF7DEF000C77CDE /* left_jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_jiantou.png; sourceTree = "<group>"; };
+		5F1FF1F81DF7DFB200C77CDE /* left_horn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_horn.png; sourceTree = "<group>"; };
+		5F1FF1FA1DF7E42500C77CDE /* LeftTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftTVCell.swift; sourceTree = "<group>"; };
+		5F1FF1FC1DF7E67700C77CDE /* NSobjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSobjectExtension.swift; sourceTree = "<group>"; };
+		5F1FF1FE1DF7ED2200C77CDE /* left_baoyue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_baoyue.png; sourceTree = "<group>"; };
+		5F1FF1FF1DF7ED2200C77CDE /* left_lishi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_lishi.png; sourceTree = "<group>"; };
+		5F1FF2001DF7ED2200C77CDE /* left_liwu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_liwu.png; sourceTree = "<group>"; };
+		5F1FF2011DF7ED2200C77CDE /* left_xiaoxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_xiaoxi.png; sourceTree = "<group>"; };
+		5F1FF2021DF7ED2200C77CDE /* left_zhanghu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_zhanghu.png; sourceTree = "<group>"; };
+		5F1FF2081DF7F3FA00C77CDE /* head.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head.jpg; sourceTree = "<group>"; };
+		5F4AE5161DF8066100BF557F /* icon_small_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_small_mask.png; sourceTree = "<group>"; };
+		5F4AE5181DF8087E00BF557F /* notification_icon_newbie_present@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notification_icon_newbie_present@2x.png"; sourceTree = "<group>"; };
+		5F4AE51A1DF80D1E00BF557F /* BookShelvesTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShelvesTVCell.swift; sourceTree = "<group>"; };
+		5F4AE51C1DF80E1700BF557F /* 150.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 150.jpeg; sourceTree = "<group>"; };
+		5F4E26671DFE98F30083B413 /* feedflow_refresh_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedflow_refresh_bg@3x.png"; sourceTree = "<group>"; };
+		5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJRefreshDiyHeader.swift; sourceTree = "<group>"; };
+		5F945B8F1DFE44D800ACA1E1 /* 2342.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 2342.h; sourceTree = "<group>"; };
+		5F945B901DFE44D800ACA1E1 /* 2342.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = 2342.m; sourceTree = "<group>"; };
+		970876D4178D94DF41DB6784 /* Pods_QQReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B6B5DFB7903201DE062A10B /* Pods-QQReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.debug.xcconfig"; sourceTree = "<group>"; };
+		EDD654AC0D80F0CD0B933A8D /* Pods-QQReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F1FF1861DF7BD5300C77CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949E1860568574CB825F89F9 /* Pods_QQReader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1FF19A1DF7BD5300C77CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1FF1A51DF7BD5300C77CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4ECC2F77FCB8926C438C668F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				970876D4178D94DF41DB6784 /* Pods_QQReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F1FF1801DF7BD5300C77CDE = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1C91DF7C47900C77CDE /* AppDelegate */,
+				5F1FF1CA1DF7C47900C77CDE /* StoryBoard */,
+				5F1FF1BA1DF7C41400C77CDE /* Macros */,
+				5F1FF1BB1DF7C41400C77CDE /* Resources */,
+				5F1FF1BC1DF7C41400C77CDE /* Categorys */,
+				5F1FF1BD1DF7C41400C77CDE /* Helpers */,
+				5F1FF1BE1DF7C41400C77CDE /* Sections */,
+				5F1FF18B1DF7BD5300C77CDE /* QQReader */,
+				5F1FF1A01DF7BD5300C77CDE /* QQReaderTests */,
+				5F1FF1AB1DF7BD5300C77CDE /* QQReaderUITests */,
+				5F1FF18A1DF7BD5300C77CDE /* Products */,
+				F24AB568CC559A8F6F914ADE /* Pods */,
+				4ECC2F77FCB8926C438C668F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5F1FF18A1DF7BD5300C77CDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1891DF7BD5300C77CDE /* QQReader.app */,
+				5F1FF19D1DF7BD5300C77CDE /* QQReaderTests.xctest */,
+				5F1FF1A81DF7BD5300C77CDE /* QQReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F1FF18B1DF7BD5300C77CDE /* QQReader */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1931DF7BD5300C77CDE /* Assets.xcassets */,
+				5F1FF1981DF7BD5300C77CDE /* Info.plist */,
+			);
+			path = QQReader;
+			sourceTree = "<group>";
+		};
+		5F1FF1A01DF7BD5300C77CDE /* QQReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1A11DF7BD5300C77CDE /* QQReaderTests.swift */,
+				5F1FF1A31DF7BD5300C77CDE /* Info.plist */,
+			);
+			path = QQReaderTests;
+			sourceTree = "<group>";
+		};
+		5F1FF1AB1DF7BD5300C77CDE /* QQReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1AC1DF7BD5300C77CDE /* QQReaderUITests.swift */,
+				5F1FF1AE1DF7BD5300C77CDE /* Info.plist */,
+			);
+			path = QQReaderUITests;
+			sourceTree = "<group>";
+		};
+		5F1FF1BA1DF7C41400C77CDE /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1EB1DF7CC3400C77CDE /* BaseTheme.swift */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		5F1FF1BB1DF7C41400C77CDE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5F4AE5151DF8065A00BF557F /* BookShelves */,
+				5F1FF1F11DF7DDF500C77CDE /* Left */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5F1FF1BC1DF7C41400C77CDE /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1FC1DF7E67700C77CDE /* NSobjectExtension.swift */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		5F1FF1BD1DF7C41400C77CDE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5F945B861DFE414800ACA1E1 /* MJRefreshDiyHeader */,
+				5F1FF1BF1DF7C43F00C77CDE /* ZJDrawerController */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5F1FF1BE1DF7C41400C77CDE /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1CB1DF7C4F200C77CDE /* Main */,
+				5F1FF1CF1DF7C4F200C77CDE /* BookShelves */,
+				5F1FF1D31DF7C4F200C77CDE /* Selection */,
+				5F1FF1D71DF7C4F200C77CDE /* Stack */,
+				5F1FF1DB1DF7C4F200C77CDE /* Discover */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		5F1FF1BF1DF7C43F00C77CDE /* ZJDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1C01DF7C43F00C77CDE /* LFJCircleProgressView.h */,
+				5F1FF1C11DF7C43F00C77CDE /* LFJCircleProgressView.m */,
+				5F1FF1C21DF7C43F00C77CDE /* LFJLoadingView.h */,
+				5F1FF1C31DF7C43F00C77CDE /* LFJLoadingView.m */,
+				5F1FF1C41DF7C43F00C77CDE /* ZJDrawerController.h */,
+				5F1FF1C51DF7C43F00C77CDE /* ZJDrawerController.m */,
+			);
+			path = ZJDrawerController;
+			sourceTree = "<group>";
+		};
+		5F1FF1C91DF7C47900C77CDE /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF18C1DF7BD5300C77CDE /* AppDelegate.swift */,
+				5F945B8F1DFE44D800ACA1E1 /* 2342.h */,
+				5F945B901DFE44D800ACA1E1 /* 2342.m */,
+				5F1FF1EA1DF7CB9B00C77CDE /* Bridging.h */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5F1FF1CA1DF7C47900C77CDE /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1951DF7BD5300C77CDE /* LaunchScreen.storyboard */,
+				5F1FF1901DF7BD5300C77CDE /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		5F1FF1CB1DF7C4F200C77CDE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1CC1DF7C4F200C77CDE /* Controller */,
+				5F1FF1CD1DF7C4F200C77CDE /* Model */,
+				5F1FF1CE1DF7C4F200C77CDE /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5F1FF1CC1DF7C4F200C77CDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1ED1DF7CDE400C77CDE /* LeftViewController.swift */,
+				5F1FF1EF1DF7CE0000C77CDE /* MainTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F1FF1CD1DF7C4F200C77CDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F1FF1CE1DF7C4F200C77CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1FA1DF7E42500C77CDE /* LeftTVCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F1FF1CF1DF7C4F200C77CDE /* BookShelves */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1D01DF7C4F200C77CDE /* Controller */,
+				5F1FF1D11DF7C4F200C77CDE /* Model */,
+				5F1FF1D21DF7C4F200C77CDE /* View */,
+			);
+			path = BookShelves;
+			sourceTree = "<group>";
+		};
+		5F1FF1D01DF7C4F200C77CDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1DF1DF7C5FF00C77CDE /* BookShelvesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F1FF1D11DF7C4F200C77CDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F1FF1D21DF7C4F200C77CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F4AE51A1DF80D1E00BF557F /* BookShelvesTVCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F1FF1D31DF7C4F200C77CDE /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1D41DF7C4F200C77CDE /* Controller */,
+				5F1FF1D51DF7C4F200C77CDE /* Model */,
+				5F1FF1D61DF7C4F200C77CDE /* View */,
+			);
+			path = Selection;
+			sourceTree = "<group>";
+		};
+		5F1FF1D41DF7C4F200C77CDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1E11DF7C61500C77CDE /* SelectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F1FF1D51DF7C4F200C77CDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F1FF1D61DF7C4F200C77CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F1FF1D71DF7C4F200C77CDE /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1D81DF7C4F200C77CDE /* Controller */,
+				5F1FF1D91DF7C4F200C77CDE /* Model */,
+				5F1FF1DA1DF7C4F200C77CDE /* View */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		5F1FF1D81DF7C4F200C77CDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1E31DF7C61E00C77CDE /* StackViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F1FF1D91DF7C4F200C77CDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F1FF1DA1DF7C4F200C77CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F1FF1DB1DF7C4F200C77CDE /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1DC1DF7C4F200C77CDE /* Controller */,
+				5F1FF1DD1DF7C4F200C77CDE /* Model */,
+				5F1FF1DE1DF7C4F200C77CDE /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		5F1FF1DC1DF7C4F200C77CDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF1E51DF7C98B00C77CDE /* DiscoverViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F1FF1DD1DF7C4F200C77CDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F1FF1DE1DF7C4F200C77CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F1FF1F11DF7DDF500C77CDE /* Left */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FF2081DF7F3FA00C77CDE /* head.jpg */,
+				5F1FF1FE1DF7ED2200C77CDE /* left_baoyue.png */,
+				5F1FF1FF1DF7ED2200C77CDE /* left_lishi.png */,
+				5F1FF2001DF7ED2200C77CDE /* left_liwu.png */,
+				5F1FF2011DF7ED2200C77CDE /* left_xiaoxi.png */,
+				5F1FF2021DF7ED2200C77CDE /* left_zhanghu.png */,
+				5F1FF1F81DF7DFB200C77CDE /* left_horn.png */,
+				5F1FF1F61DF7DEF000C77CDE /* left_jiantou.png */,
+				5F1FF1F41DF7DE4500C77CDE /* left_moon.png */,
+				5F1FF1F21DF7DDFA00C77CDE /* left_setting.png */,
+			);
+			path = Left;
+			sourceTree = "<group>";
+		};
+		5F4AE5151DF8065A00BF557F /* BookShelves */ = {
+			isa = PBXGroup;
+			children = (
+				5F4E26671DFE98F30083B413 /* feedflow_refresh_bg@3x.png */,
+				5F4AE51C1DF80E1700BF557F /* 150.jpeg */,
+				5F4AE5161DF8066100BF557F /* icon_small_mask.png */,
+				5F4AE5181DF8087E00BF557F /* notification_icon_newbie_present@2x.png */,
+			);
+			path = BookShelves;
+			sourceTree = "<group>";
+		};
+		5F945B861DFE414800ACA1E1 /* MJRefreshDiyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */,
+			);
+			path = MJRefreshDiyHeader;
+			sourceTree = "<group>";
+		};
+		F24AB568CC559A8F6F914ADE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B6B5DFB7903201DE062A10B /* Pods-QQReader.debug.xcconfig */,
+				EDD654AC0D80F0CD0B933A8D /* Pods-QQReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F1FF1881DF7BD5300C77CDE /* QQReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1FF1B11DF7BD5300C77CDE /* Build configuration list for PBXNativeTarget "QQReader" */;
+			buildPhases = (
+				B480A66D3C6CC66D365BC28C /* [CP] Check Pods Manifest.lock */,
+				5F1FF1851DF7BD5300C77CDE /* Sources */,
+				5F1FF1861DF7BD5300C77CDE /* Frameworks */,
+				5F1FF1871DF7BD5300C77CDE /* Resources */,
+				C0BBB0E78BF9F4FE2B0DFDC3 /* [CP] Embed Pods Frameworks */,
+				4FBB76BD16C370D4C10D0CD4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QQReader;
+			productName = QQReader;
+			productReference = 5F1FF1891DF7BD5300C77CDE /* QQReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F1FF19C1DF7BD5300C77CDE /* QQReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1FF1B41DF7BD5300C77CDE /* Build configuration list for PBXNativeTarget "QQReaderTests" */;
+			buildPhases = (
+				5F1FF1991DF7BD5300C77CDE /* Sources */,
+				5F1FF19A1DF7BD5300C77CDE /* Frameworks */,
+				5F1FF19B1DF7BD5300C77CDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1FF19F1DF7BD5300C77CDE /* PBXTargetDependency */,
+			);
+			name = QQReaderTests;
+			productName = QQReaderTests;
+			productReference = 5F1FF19D1DF7BD5300C77CDE /* QQReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5F1FF1A71DF7BD5300C77CDE /* QQReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1FF1B71DF7BD5300C77CDE /* Build configuration list for PBXNativeTarget "QQReaderUITests" */;
+			buildPhases = (
+				5F1FF1A41DF7BD5300C77CDE /* Sources */,
+				5F1FF1A51DF7BD5300C77CDE /* Frameworks */,
+				5F1FF1A61DF7BD5300C77CDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1FF1AA1DF7BD5300C77CDE /* PBXTargetDependency */,
+			);
+			name = QQReaderUITests;
+			productName = QQReaderUITests;
+			productReference = 5F1FF1A81DF7BD5300C77CDE /* QQReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F1FF1811DF7BD5300C77CDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = JUN;
+				TargetAttributes = {
+					5F1FF1881DF7BD5300C77CDE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = EFR9ZBG88M;
+						ProvisioningStyle = Automatic;
+					};
+					5F1FF19C1DF7BD5300C77CDE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = EFR9ZBG88M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5F1FF1881DF7BD5300C77CDE;
+					};
+					5F1FF1A71DF7BD5300C77CDE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = EFR9ZBG88M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5F1FF1881DF7BD5300C77CDE;
+					};
+				};
+			};
+			buildConfigurationList = 5F1FF1841DF7BD5300C77CDE /* Build configuration list for PBXProject "QQReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F1FF1801DF7BD5300C77CDE;
+			productRefGroup = 5F1FF18A1DF7BD5300C77CDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F1FF1881DF7BD5300C77CDE /* QQReader */,
+				5F1FF19C1DF7BD5300C77CDE /* QQReaderTests */,
+				5F1FF1A71DF7BD5300C77CDE /* QQReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F1FF1871DF7BD5300C77CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1FF1971DF7BD5300C77CDE /* LaunchScreen.storyboard in Resources */,
+				5F1FF2041DF7ED2200C77CDE /* left_lishi.png in Resources */,
+				5F4AE51D1DF80E1700BF557F /* 150.jpeg in Resources */,
+				5F4AE5191DF8087E00BF557F /* notification_icon_newbie_present@2x.png in Resources */,
+				5F1FF2031DF7ED2200C77CDE /* left_baoyue.png in Resources */,
+				5F1FF1F71DF7DEF000C77CDE /* left_jiantou.png in Resources */,
+				5F1FF1941DF7BD5300C77CDE /* Assets.xcassets in Resources */,
+				5F1FF2051DF7ED2200C77CDE /* left_liwu.png in Resources */,
+				5F1FF2091DF7F3FA00C77CDE /* head.jpg in Resources */,
+				5F4AE5171DF8066100BF557F /* icon_small_mask.png in Resources */,
+				5F1FF2071DF7ED2200C77CDE /* left_zhanghu.png in Resources */,
+				5F1FF1921DF7BD5300C77CDE /* Main.storyboard in Resources */,
+				5F1FF1F91DF7DFB200C77CDE /* left_horn.png in Resources */,
+				5F1FF2061DF7ED2200C77CDE /* left_xiaoxi.png in Resources */,
+				5F1FF1F31DF7DDFA00C77CDE /* left_setting.png in Resources */,
+				5F4E26681DFE98F30083B413 /* feedflow_refresh_bg@3x.png in Resources */,
+				5F1FF1F51DF7DE4500C77CDE /* left_moon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1FF19B1DF7BD5300C77CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1FF1A61DF7BD5300C77CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FBB76BD16C370D4C10D0CD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQReader/Pods-QQReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B480A66D3C6CC66D365BC28C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0BBB0E78BF9F4FE2B0DFDC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQReader/Pods-QQReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F1FF1851DF7BD5300C77CDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1FF1C71DF7C43F00C77CDE /* LFJLoadingView.m in Sources */,
+				5F4AE51B1DF80D1E00BF557F /* BookShelvesTVCell.swift in Sources */,
+				5F945B881DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift in Sources */,
+				5F1FF1E21DF7C61500C77CDE /* SelectionViewController.swift in Sources */,
+				5F1FF1FD1DF7E67700C77CDE /* NSobjectExtension.swift in Sources */,
+				5F1FF1F01DF7CE0000C77CDE /* MainTabBarController.swift in Sources */,
+				5F1FF1EC1DF7CC3400C77CDE /* BaseTheme.swift in Sources */,
+				5F1FF1FB1DF7E42500C77CDE /* LeftTVCell.swift in Sources */,
+				5F1FF1EE1DF7CDE400C77CDE /* LeftViewController.swift in Sources */,
+				5F1FF1C61DF7C43F00C77CDE /* LFJCircleProgressView.m in Sources */,
+				5F1FF1E41DF7C61E00C77CDE /* StackViewController.swift in Sources */,
+				5F1FF1C81DF7C43F00C77CDE /* ZJDrawerController.m in Sources */,
+				5F945B911DFE44D800ACA1E1 /* 2342.m in Sources */,
+				5F1FF1E61DF7C98B00C77CDE /* DiscoverViewController.swift in Sources */,
+				5F1FF18D1DF7BD5300C77CDE /* AppDelegate.swift in Sources */,
+				5F1FF1E01DF7C5FF00C77CDE /* BookShelvesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1FF1991DF7BD5300C77CDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1FF1A21DF7BD5300C77CDE /* QQReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1FF1A41DF7BD5300C77CDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1FF1AD1DF7BD5300C77CDE /* QQReaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F1FF19F1DF7BD5300C77CDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F1FF1881DF7BD5300C77CDE /* QQReader */;
+			targetProxy = 5F1FF19E1DF7BD5300C77CDE /* PBXContainerItemProxy */;
+		};
+		5F1FF1AA1DF7BD5300C77CDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F1FF1881DF7BD5300C77CDE /* QQReader */;
+			targetProxy = 5F1FF1A91DF7BD5300C77CDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F1FF1901DF7BD5300C77CDE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1FF1911DF7BD5300C77CDE /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../QQReader;
+			sourceTree = "<group>";
+		};
+		5F1FF1951DF7BD5300C77CDE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1FF1961DF7BD5300C77CDE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ../QQReader;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F1FF1AF1DF7BD5300C77CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5F1FF1B01DF7BD5300C77CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F1FF1B21DF7BD5300C77CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B6B5DFB7903201DE062A10B /* Pods-QQReader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EFR9ZBG88M;
+				INFOPLIST_FILE = QQReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JUN.QQReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = AppDelegate/Bridging.h;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5F1FF1B31DF7BD5300C77CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDD654AC0D80F0CD0B933A8D /* Pods-QQReader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EFR9ZBG88M;
+				INFOPLIST_FILE = QQReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JUN.QQReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = AppDelegate/Bridging.h;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5F1FF1B51DF7BD5300C77CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EFR9ZBG88M;
+				INFOPLIST_FILE = QQReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JUN.QQReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QQReader.app/QQReader";
+			};
+			name = Debug;
+		};
+		5F1FF1B61DF7BD5300C77CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EFR9ZBG88M;
+				INFOPLIST_FILE = QQReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JUN.QQReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QQReader.app/QQReader";
+			};
+			name = Release;
+		};
+		5F1FF1B81DF7BD5300C77CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EFR9ZBG88M;
+				INFOPLIST_FILE = QQReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JUN.QQReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = QQReader;
+			};
+			name = Debug;
+		};
+		5F1FF1B91DF7BD5300C77CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EFR9ZBG88M;
+				INFOPLIST_FILE = QQReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JUN.QQReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = QQReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F1FF1841DF7BD5300C77CDE /* Build configuration list for PBXProject "QQReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1FF1AF1DF7BD5300C77CDE /* Debug */,
+				5F1FF1B01DF7BD5300C77CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1FF1B11DF7BD5300C77CDE /* Build configuration list for PBXNativeTarget "QQReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1FF1B21DF7BD5300C77CDE /* Debug */,
+				5F1FF1B31DF7BD5300C77CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1FF1B41DF7BD5300C77CDE /* Build configuration list for PBXNativeTarget "QQReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1FF1B51DF7BD5300C77CDE /* Debug */,
+				5F1FF1B61DF7BD5300C77CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1FF1B71DF7BD5300C77CDE /* Build configuration list for PBXNativeTarget "QQReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1FF1B81DF7BD5300C77CDE /* Debug */,
+				5F1FF1B91DF7BD5300C77CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F1FF1811DF7BD5300C77CDE /* Project object */;
+}
