@@ -22,16 +22,22 @@ class MJRefreshDiyHeader: MJRefreshStateHeader {
     lazy var loadingView: UIView = {
         let loadingView = UIView(frame: CGRect(x: self.frame.size.width/2 - 15, y: self.frame.size.height/2 - 15, width: 30, height: 30))
         loadingView.layer.addSublayer(self.activityShapLayer)
-        self.createAnimation()
         return loadingView
     }()
-    func createAnimation() {
+    func stopAnimations() {
+        self.activityShapLayer.removeAllAnimations()
+    }
+    func startAnimations() {
+        self.addAnimation()
+    }
+    func addAnimation() {
         let animation = CABasicAnimation()
         animation.keyPath = "transform.rotation.z";
         animation.duration = 1.0;
         animation.fromValue = 0;
         animation.toValue = 2*M_PI;
         animation.repeatCount = 10000;
+        animation.isRemovedOnCompletion = false;
         self.activityShapLayer.add(animation, forKey: "rotation")
     }
     override var state: MJRefreshState{
@@ -39,6 +45,8 @@ class MJRefreshDiyHeader: MJRefreshStateHeader {
             //闲置状态
             if state == MJRefreshState.idle {
                 print("闲置状态")
+                self.stopAnimations()
+
             }
             //松开就可以进行刷新的状态
             else if state == MJRefreshState.pulling
@@ -50,6 +58,10 @@ class MJRefreshDiyHeader: MJRefreshStateHeader {
             else if state == MJRefreshState.refreshing
             {
                 print("正在刷新状态")
+                self.startAnimations()
+            }
+            else if state == MJRefreshState.noMoreData
+            {
 
             }
         }

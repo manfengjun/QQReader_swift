@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NUh-51-Nhg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NUh-51-Nhg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -142,10 +142,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-zi-jQO">
-                            <rect key="frame" x="69" y="19" width="163" height="162"/>
+                            <rect key="frame" x="69" y="18.5" width="163" height="163"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ6-A6-KWn">
-                                    <rect key="frame" x="28" y="27" width="108" height="108"/>
+                                    <rect key="frame" x="28" y="27.5" width="108" height="108"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="tQ6-A6-KWn" secondAttribute="height" multiplier="1:1" id="GUf-xF-3lQ"/>
                                     </constraints>
@@ -154,7 +154,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本周阅读时长/分钟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMa-HZ-feF">
-                                    <rect key="frame" x="0.0" y="135" width="163" height="27"/>
+                                    <rect key="frame" x="0.0" y="135.5" width="163" height="27.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -455,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLV-I3-XXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224.8" y="23.838080959520241"/>
+            <point key="canvasLocation" x="1225" y="50"/>
         </scene>
         <!--Discover View Controller-->
         <scene sceneID="ZWM-QH-3Yg">
@@ -474,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVH-K5-gTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="922"/>
+            <point key="canvasLocation" x="1225" y="963"/>
         </scene>
         <!--书架-->
         <scene sceneID="i5c-rr-4AV">
@@ -531,7 +531,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7l-sJ-grT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="285.60000000000002" y="23.838080959520241"/>
+            <point key="canvasLocation" x="286" y="50"/>
         </scene>
         <!--发现-->
         <scene sceneID="E3N-Xb-ePl">
@@ -550,13 +550,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCx-wB-0FA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="922"/>
+            <point key="canvasLocation" x="286" y="963"/>
         </scene>
     </scenes>
     <resources>
         <image name="150.jpeg" width="150" height="200"/>
         <image name="head.jpg" width="315" height="308"/>
-        <image name="left_horn.png" width="32" height="32"/>
+        <image name="left_horn.png" width="39" height="39"/>
         <image name="left_jiantou.png" width="32" height="32"/>
         <image name="left_moon.png" width="32" height="32"/>
         <image name="left_setting.png" width="32" height="32"/>

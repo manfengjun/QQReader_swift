@@ -5,4 +5,5 @@ target 'QQReader' do
     pod 'MJRefresh', '~> 3.1.12'
     pod 'Alamofire', '~> 4.2.0'
     pod 'SnapKit', '~> 3.0.2'
+    pod 'SVProgressHUD', '~> 2.1.2'
 end

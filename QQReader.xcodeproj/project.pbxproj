@@ -41,7 +41,6 @@
 		5F4AE51D1DF80E1700BF557F /* 150.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5F4AE51C1DF80E1700BF557F /* 150.jpeg */; };
 		5F4E26681DFE98F30083B413 /* feedflow_refresh_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E26671DFE98F30083B413 /* feedflow_refresh_bg@3x.png */; };
 		5F945B881DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */; };
-		5F945B911DFE44D800ACA1E1 /* 2342.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F945B901DFE44D800ACA1E1 /* 2342.m */; };
 		949E1860568574CB825F89F9 /* Pods_QQReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970876D4178D94DF41DB6784 /* Pods_QQReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,8 +106,6 @@
 		5F4AE51C1DF80E1700BF557F /* 150.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 150.jpeg; sourceTree = "<group>"; };
 		5F4E26671DFE98F30083B413 /* feedflow_refresh_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedflow_refresh_bg@3x.png"; sourceTree = "<group>"; };
 		5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJRefreshDiyHeader.swift; sourceTree = "<group>"; };
-		5F945B8F1DFE44D800ACA1E1 /* 2342.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 2342.h; sourceTree = "<group>"; };
-		5F945B901DFE44D800ACA1E1 /* 2342.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = 2342.m; sourceTree = "<group>"; };
 		970876D4178D94DF41DB6784 /* Pods_QQReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6B5DFB7903201DE062A10B /* Pods-QQReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD654AC0D80F0CD0B933A8D /* Pods-QQReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -267,8 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				5F1FF18C1DF7BD5300C77CDE /* AppDelegate.swift */,
-				5F945B8F1DFE44D800ACA1E1 /* 2342.h */,
-				5F945B901DFE44D800ACA1E1 /* 2342.m */,
 				5F1FF1EA1DF7CB9B00C77CDE /* Bridging.h */,
 			);
 			path = AppDelegate;
@@ -705,7 +700,6 @@
 				5F1FF1C61DF7C43F00C77CDE /* LFJCircleProgressView.m in Sources */,
 				5F1FF1E41DF7C61E00C77CDE /* StackViewController.swift in Sources */,
 				5F1FF1C81DF7C43F00C77CDE /* ZJDrawerController.m in Sources */,
-				5F945B911DFE44D800ACA1E1 /* 2342.m in Sources */,
 				5F1FF1E61DF7C98B00C77CDE /* DiscoverViewController.swift in Sources */,
 				5F1FF18D1DF7BD5300C77CDE /* AppDelegate.swift in Sources */,
 				5F1FF1E01DF7C5FF00C77CDE /* BookShelvesViewController.swift in Sources */,

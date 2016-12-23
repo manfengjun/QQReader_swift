@@ -28,6 +28,7 @@ class BookShelvesViewController: UIViewController {
         button.layer.cornerRadius = 17;
         return button
     }()
+    // refresh Init
     func refreshData() {
         let header = MJRefreshDiyHeader { 
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -38,13 +39,14 @@ class BookShelvesViewController: UIViewController {
         header?.lastUpdatedTimeLabel.isHidden = true
         self.tableView.mj_header = header
     }
+    //UI Init
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         last = 0
         self.refreshData()
         self.tableView.mj_header.beginRefreshing()
         self.tableView.tableHeaderView = headView
-
         // Do any additional setup after loading the view.
     }
     func createNavItem() {
@@ -56,10 +58,13 @@ class BookShelvesViewController: UIViewController {
         self.view.insertSubview(self.refreshBgView, belowSubview: self.tableView)
 
         createNavItem()
-
         self.navigationController?.navigationBar.isTranslucent = true;
         self.navigationController?.navigationBar.barTintColor = UIColor.orange
         self.navigationController?.navigationBar.subviews[0].alpha = 0
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+//        self.tableView.mj_header.endRefreshing()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
