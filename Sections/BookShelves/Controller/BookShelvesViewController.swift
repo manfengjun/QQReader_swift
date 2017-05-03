@@ -13,6 +13,10 @@ class BookShelvesViewController: UIViewController {
     @IBOutlet var headView: UIView!
     @IBOutlet weak var tableView: UITableView!
     var last:CGFloat?
+    lazy var booksArray:NSMutableArray = {
+        let booksArray = NSMutableArray()
+        return booksArray
+    }()
     lazy var refreshBgView:UIView = {
         let refreshBgView = UIView(frame: CGRect(x: 0, y: -UIScreen.main.bounds.size.width*1.5, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width*1.5))
         refreshBgView.backgroundColor = UIColor(patternImage: UIImage(named:"feedflow_refresh_bg.png")!)
@@ -21,17 +25,22 @@ class BookShelvesViewController: UIViewController {
     lazy var headBtn:UIButton = {
         let button = UIButton(type: UIButtonType.custom)
         button.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        button.backgroundColor = UIColor.red
+        button.setImage(UIImage.init(named: "head.jpg"), for: UIControlState.normal)
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = 17;
+        button.layer.cornerRadius = 17
         return button
     }()
+    
     // refresh Init
     func refreshData() {
+        self.booksArray .removeAllObjects();
         let header = MJRefreshDiyHeader { 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.getBooksUrl();
+                //刷新
+                self.tableView.reloadData()
                 self.tableView.mj_header.endRefreshing()
             }
         }
@@ -39,8 +48,22 @@ class BookShelvesViewController: UIViewController {
         header?.lastUpdatedTimeLabel.isHidden = true
         self.tableView.mj_header = header
     }
-    //UI Init
     
+    //Get BooksData
+    func getBooksUrl() {
+        let path = Bundle.main.bundlePath
+        let fileManager = FileManager.default
+        let fileArray = fileManager.subpaths(atPath: path)
+        for fb in fileArray! {
+            if fb.hasSuffix(".txt") {
+                let index = fb.index(fb.endIndex, offsetBy: -4)
+                self.booksArray.add(fb.substring(to: index))
+                print(fb);
+            }
+        }
+    }
+    
+    //UI Init
     override func viewDidLoad() {
         super.viewDidLoad()
         last = 0
@@ -49,10 +72,12 @@ class BookShelvesViewController: UIViewController {
         self.tableView.tableHeaderView = headView
         // Do any additional setup after loading the view.
     }
+    
     func createNavItem() {
         let leftItem = UIBarButtonItem(customView: headBtn)
         self.navigationItem.leftBarButtonItem = leftItem
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.insertSubview(self.refreshBgView, belowSubview: self.tableView)
@@ -62,10 +87,12 @@ class BookShelvesViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.orange
         self.navigationController?.navigationBar.subviews[0].alpha = 0
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 //        self.tableView.mj_header.endRefreshing()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -89,10 +116,11 @@ extension BookShelvesViewController:UITableViewDelegate,UITableViewDataSource,UI
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return self.booksArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookShelvesTVCell", for: indexPath) as! BookShelvesTVCell
+        cell.bookTitle.text = self.booksArray[indexPath.row] as? String
         return cell
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -111,5 +139,8 @@ extension BookShelvesViewController:UITableViewDelegate,UITableViewDataSource,UI
         }
         let progress = scrollView.contentOffset.y/200
         self.navigationController?.navigationBar.subviews[0].alpha = progress
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "readerSegueID", sender: nil);
     }
 }

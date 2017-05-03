@@ -10,6 +10,9 @@ import UIKit
 
 class BookShelvesTVCell: UITableViewCell {
 
+    @IBOutlet weak var bookIV: UIImageView!
+    @IBOutlet weak var bookTitle: UILabel!
+    @IBOutlet weak var bookProgress: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
