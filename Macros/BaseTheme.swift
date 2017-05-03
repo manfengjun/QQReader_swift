@@ -19,9 +19,15 @@ public let IS_IPHONE_6:Bool = ScreenHeight == 667
 public let IS_IPHONE_6P:Bool = ScreenHeight == 736
 
 public let MAINBGCOLOR = UIColor.white
-public let MAINBTCOLOR = Color(66,g: 189,b: 86)
-public let MAINBARCOLOR = Color(66,g: 189,b: 86)
-public let PLACEHOLDERCOLOR = Color(161,g: 161,b: 161)
+public let MAINBTCOLOR = RGBColor(66,g: 189,b: 86)
+public let MAINBARCOLOR = RGBColor(66,g: 189,b: 86)
+public let PLACEHOLDERCOLOR = RGBColor(161,g: 161,b: 161)
+
+public let TopSpacing:CGFloat = 40.0
+public let BottomSpacing:CGFloat = 40.0
+public let LeftSpacing:CGFloat = 20.0
+public let RightSpacing:CGFloat = 20.0
+
 class BaseTheme: NSObject {
 
     //单例
@@ -36,7 +42,7 @@ class BaseTheme: NSObject {
  
  - returns: return value description
  */
-func Color(_ r:Float,g:Float,b:Float) -> UIColor {
+func RGBColor(_ r:Float,g:Float,b:Float) -> UIColor {
     return UIColor(colorLiteralRed: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
 }
 

@@ -6,4 +6,6 @@ target 'QQReader' do
     pod 'Alamofire', '~> 4.2.0'
     pod 'SnapKit', '~> 3.0.2'
     pod 'SVProgressHUD', '~> 2.1.2'
+    pod 'YYModel', '~> 1.0.4'
+    pod 'YYCache', '~> 1.0.4'
 end

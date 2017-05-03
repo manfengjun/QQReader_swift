@@ -13,15 +13,18 @@ class BookShelvesViewController: UIViewController {
     @IBOutlet var headView: UIView!
     @IBOutlet weak var tableView: UITableView!
     var last:CGFloat?
+    ///本地书籍
     lazy var booksArray:NSMutableArray = {
         let booksArray = NSMutableArray()
         return booksArray
     }()
+    ///刷新背景
     lazy var refreshBgView:UIView = {
         let refreshBgView = UIView(frame: CGRect(x: 0, y: -UIScreen.main.bounds.size.width*1.5, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width*1.5))
         refreshBgView.backgroundColor = UIColor(patternImage: UIImage(named:"feedflow_refresh_bg.png")!)
         return refreshBgView
     }()
+    ///头部按钮
     lazy var headBtn:UIButton = {
         let button = UIButton(type: UIButtonType.custom)
         button.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
@@ -33,7 +36,7 @@ class BookShelvesViewController: UIViewController {
         return button
     }()
     
-    // refresh Init
+    /// 刷新数据
     func refreshData() {
         self.booksArray .removeAllObjects();
         let header = MJRefreshDiyHeader { 
@@ -49,7 +52,7 @@ class BookShelvesViewController: UIViewController {
         self.tableView.mj_header = header
     }
     
-    //Get BooksData
+    /// 获取本地书籍地址
     func getBooksUrl() {
         let path = Bundle.main.bundlePath
         let fileManager = FileManager.default
@@ -63,7 +66,6 @@ class BookShelvesViewController: UIViewController {
         }
     }
     
-    //UI Init
     override func viewDidLoad() {
         super.viewDidLoad()
         last = 0
@@ -95,19 +97,16 @@ class BookShelvesViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "readerSegueID"{
+            let indexPath = sender as! NSIndexPath
+            let readVC = segue.destination as? FJReadPageViewController
+            let fileUrl = Bundle.main.url(forResource: self.booksArray[indexPath.row] as? String, withExtension: "txt")
+            readVC?.resourceURL = fileUrl
+        }
     }
-    */
 
 }
 extension BookShelvesViewController:UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate
@@ -141,6 +140,6 @@ extension BookShelvesViewController:UITableViewDelegate,UITableViewDataSource,UI
         self.navigationController?.navigationBar.subviews[0].alpha = progress
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "readerSegueID", sender: nil);
+        self.performSegue(withIdentifier: "readerSegueID", sender: indexPath);
     }
 }

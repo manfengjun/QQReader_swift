@@ -12,8 +12,8 @@ class MJRefreshDiyHeader: MJRefreshStateHeader {
     lazy var activityShapLayer:CAShapeLayer = {
         let center = CGPoint(x: 15, y: 15)
         let shaplayer = CAShapeLayer()
-        shaplayer.path = UIBezierPath(arcCenter: CGPoint(x:0,y:0), radius: 10, startAngle: 0, endAngle: CGFloat(M_PI)*2-0.6, clockwise: true).cgPath
-        shaplayer.strokeColor = Color(95, g: 164, b: 236).cgColor
+        shaplayer.path = UIBezierPath(arcCenter: CGPoint(x:0,y:0), radius: 10, startAngle: 0, endAngle: CGFloat(Double.pi)*2-0.6, clockwise: true).cgPath
+        shaplayer.strokeColor = RGBColor(95, g: 164, b: 236).cgColor
         shaplayer.fillColor = UIColor.clear.cgColor
         shaplayer.lineWidth = 2
         shaplayer.position = center
@@ -35,7 +35,7 @@ class MJRefreshDiyHeader: MJRefreshStateHeader {
         animation.keyPath = "transform.rotation.z";
         animation.duration = 1.0;
         animation.fromValue = 0;
-        animation.toValue = 2*M_PI;
+        animation.toValue = 2*Double.pi;
         animation.repeatCount = 10000;
         animation.isRemovedOnCompletion = false;
         self.activityShapLayer.add(animation, forKey: "rotation")

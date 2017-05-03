@@ -1,18 +1,26 @@
+
 //
-//  ReadViewController.swift
+//  FJReadViewController.swift
 //  QQReader
 //
-//  Created by jun on 2017/5/2.
+//  Created by jun on 2017/5/3.
 //  Copyright © 2017年 JUN. All rights reserved.
 //
 
 import UIKit
-class ReadViewController: UIViewController {
-    var resourceURL:URL?
-    
+
+class FJReadViewController: UIViewController {
+    var content: String?
+    lazy var readView:FJReadView = {
+        let readView = FJReadView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
+        let config = FJReadConfig.shareInstance
+        readView.frameRef = FJReaderParser().parserContent(content: self.content!, config: config, bounds: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
+        readView.content = self.content!
+        return readView
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.addSubview(readView)
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +29,6 @@ class ReadViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
 
     /*
     // MARK: - Navigation

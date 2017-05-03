@@ -42,7 +42,6 @@
 		BF0AE6AD1EB8505100A07D58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0AE6AC1EB8505100A07D58 /* AppDelegate.swift */; };
 		BF0AE6B01EB8507E00A07D58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE6AE1EB8507E00A07D58 /* LaunchScreen.storyboard */; };
 		BF0AE6B11EB8507E00A07D58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE6AF1EB8507E00A07D58 /* Main.storyboard */; };
-		BF0AE6B31EB8520600A07D58 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0AE6B21EB8520600A07D58 /* ReadViewController.swift */; };
 		BF0AE75F1EB8852C00A07D58 /* bg_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE7021EB8852C00A07D58 /* bg_back_white.png */; };
 		BF0AE7601EB8852C00A07D58 /* bg_back_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE7031EB8852C00A07D58 /* bg_back_white@2x.png */; };
 		BF0AE7611EB8852C00A07D58 /* ic_add.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE7041EB8852C00A07D58 /* ic_add.png */; };
@@ -58,6 +57,18 @@
 		BF71B5111EB95E01004D6774 /* 细说明朝.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF71B50C1EB95E01004D6774 /* 细说明朝.txt */; };
 		BF71B5121EB95E01004D6774 /* 重启霸道人生.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF71B50D1EB95E01004D6774 /* 重启霸道人生.txt */; };
 		BF71B5131EB95E01004D6774 /* 重生富贵在仙.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF71B50E1EB95E01004D6774 /* 重生富贵在仙.txt */; };
+		BF71B5201EB9A478004D6774 /* FJReadPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B51B1EB9A478004D6774 /* FJReadPageViewController.swift */; };
+		BF71B5211EB9A478004D6774 /* FJReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B51C1EB9A478004D6774 /* FJReadViewController.swift */; };
+		BF71B5221EB9A478004D6774 /* FJReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B51E1EB9A478004D6774 /* FJReadModel.swift */; };
+		BF71B5241EB9A499004D6774 /* FJReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5231EB9A499004D6774 /* FJReadView.swift */; };
+		BF71B5261EB9B096004D6774 /* FJMagnifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5251EB9B096004D6774 /* FJMagnifierView.swift */; };
+		BF71B5291EB9C06D004D6774 /* FJReaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5281EB9C06D004D6774 /* FJReaderParser.swift */; };
+		BF71B52B1EB9C457004D6774 /* FJReadConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B52A1EB9C457004D6774 /* FJReadConfig.swift */; };
+		BF71B52D1EB9DA72004D6774 /* FJMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B52C1EB9DA72004D6774 /* FJMarkModel.swift */; };
+		BF71B52F1EB9DA84004D6774 /* FJNoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B52E1EB9DA84004D6774 /* FJNoteModel.swift */; };
+		BF71B5311EB9DA98004D6774 /* FJChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5301EB9DA98004D6774 /* FJChapterModel.swift */; };
+		BF71B5331EB9DAAA004D6774 /* FJRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5321EB9DAAA004D6774 /* FJRecordModel.swift */; };
+		BF71B5381EB9E874004D6774 /* FJReadUtilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5371EB9E874004D6774 /* FJReadUtilites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +135,6 @@
 		BF0AE6AC1EB8505100A07D58 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF0AE6AE1EB8507E00A07D58 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF0AE6AF1EB8507E00A07D58 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BF0AE6B21EB8520600A07D58 /* ReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		BF0AE7021EB8852C00A07D58 /* bg_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_back_white.png; path = ../Sections/BookShelves/Controller/Reader/Resource/bg_back_white.png; sourceTree = "<group>"; };
 		BF0AE7031EB8852C00A07D58 /* bg_back_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_back_white@2x.png"; path = "../Sections/BookShelves/Controller/Reader/Resource/bg_back_white@2x.png"; sourceTree = "<group>"; };
 		BF0AE7041EB8852C00A07D58 /* ic_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_add.png; path = ../Sections/BookShelves/Controller/Reader/Resource/ic_add.png; sourceTree = "<group>"; };
@@ -141,6 +151,18 @@
 		BF71B50C1EB95E01004D6774 /* 细说明朝.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细说明朝.txt"; sourceTree = "<group>"; };
 		BF71B50D1EB95E01004D6774 /* 重启霸道人生.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "重启霸道人生.txt"; sourceTree = "<group>"; };
 		BF71B50E1EB95E01004D6774 /* 重生富贵在仙.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "重生富贵在仙.txt"; sourceTree = "<group>"; };
+		BF71B51B1EB9A478004D6774 /* FJReadPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadPageViewController.swift; sourceTree = "<group>"; };
+		BF71B51C1EB9A478004D6774 /* FJReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadViewController.swift; sourceTree = "<group>"; };
+		BF71B51E1EB9A478004D6774 /* FJReadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadModel.swift; sourceTree = "<group>"; };
+		BF71B5231EB9A499004D6774 /* FJReadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadView.swift; sourceTree = "<group>"; };
+		BF71B5251EB9B096004D6774 /* FJMagnifierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJMagnifierView.swift; sourceTree = "<group>"; };
+		BF71B5281EB9C06D004D6774 /* FJReaderParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReaderParser.swift; sourceTree = "<group>"; };
+		BF71B52A1EB9C457004D6774 /* FJReadConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadConfig.swift; sourceTree = "<group>"; };
+		BF71B52C1EB9DA72004D6774 /* FJMarkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJMarkModel.swift; sourceTree = "<group>"; };
+		BF71B52E1EB9DA84004D6774 /* FJNoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJNoteModel.swift; sourceTree = "<group>"; };
+		BF71B5301EB9DA98004D6774 /* FJChapterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJChapterModel.swift; sourceTree = "<group>"; };
+		BF71B5321EB9DAAA004D6774 /* FJRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJRecordModel.swift; sourceTree = "<group>"; };
+		BF71B5371EB9E874004D6774 /* FJReadUtilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadUtilites.swift; sourceTree = "<group>"; };
 		EDD654AC0D80F0CD0B933A8D /* Pods-QQReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -361,6 +383,7 @@
 		5F1FF1CF1DF7C4F200C77CDE /* BookShelves */ = {
 			isa = PBXGroup;
 			children = (
+				BF71B5191EB9A478004D6774 /* Read */,
 				5F1FF1D01DF7C4F200C77CDE /* Controller */,
 				5F1FF1D11DF7C4F200C77CDE /* Model */,
 				5F1FF1D21DF7C4F200C77CDE /* View */,
@@ -372,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				5F1FF1DF1DF7C5FF00C77CDE /* BookShelvesViewController.swift */,
-				BF0AE6B21EB8520600A07D58 /* ReadViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -537,6 +559,57 @@
 			path = Books;
 			sourceTree = "<group>";
 		};
+		BF71B5191EB9A478004D6774 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				BF71B5271EB9C051004D6774 /* Core */,
+				BF71B51A1EB9A478004D6774 /* Controller */,
+				BF71B51D1EB9A478004D6774 /* Model */,
+				BF71B51F1EB9A478004D6774 /* View */,
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
+		BF71B51A1EB9A478004D6774 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF71B51B1EB9A478004D6774 /* FJReadPageViewController.swift */,
+				BF71B51C1EB9A478004D6774 /* FJReadViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF71B51D1EB9A478004D6774 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF71B51E1EB9A478004D6774 /* FJReadModel.swift */,
+				BF71B52C1EB9DA72004D6774 /* FJMarkModel.swift */,
+				BF71B52E1EB9DA84004D6774 /* FJNoteModel.swift */,
+				BF71B5301EB9DA98004D6774 /* FJChapterModel.swift */,
+				BF71B5321EB9DAAA004D6774 /* FJRecordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF71B51F1EB9A478004D6774 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF71B5231EB9A499004D6774 /* FJReadView.swift */,
+				BF71B5251EB9B096004D6774 /* FJMagnifierView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF71B5271EB9C051004D6774 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BF71B5281EB9C06D004D6774 /* FJReaderParser.swift */,
+				BF71B52A1EB9C457004D6774 /* FJReadConfig.swift */,
+				BF71B5371EB9E874004D6774 /* FJReadUtilites.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		F24AB568CC559A8F6F914ADE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,7 +685,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = JUN;
 				TargetAttributes = {
 					5F1FF1881DF7BD5300C77CDE = {
@@ -736,7 +809,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C0BBB0E78BF9F4FE2B0DFDC3 /* [CP] Embed Pods Frameworks */ = {
@@ -762,20 +835,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F1FF1C71DF7C43F00C77CDE /* LFJLoadingView.m in Sources */,
+				BF71B5201EB9A478004D6774 /* FJReadPageViewController.swift in Sources */,
 				5F4AE51B1DF80D1E00BF557F /* BookShelvesTVCell.swift in Sources */,
+				BF71B5221EB9A478004D6774 /* FJReadModel.swift in Sources */,
 				5F945B881DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift in Sources */,
+				BF71B5261EB9B096004D6774 /* FJMagnifierView.swift in Sources */,
+				BF71B5381EB9E874004D6774 /* FJReadUtilites.swift in Sources */,
 				5F1FF1E21DF7C61500C77CDE /* SelectionViewController.swift in Sources */,
 				5F1FF1FD1DF7E67700C77CDE /* NSobjectExtension.swift in Sources */,
+				BF71B5331EB9DAAA004D6774 /* FJRecordModel.swift in Sources */,
 				5F1FF1F01DF7CE0000C77CDE /* MainTabBarController.swift in Sources */,
+				BF71B5241EB9A499004D6774 /* FJReadView.swift in Sources */,
+				BF71B52D1EB9DA72004D6774 /* FJMarkModel.swift in Sources */,
+				BF71B5291EB9C06D004D6774 /* FJReaderParser.swift in Sources */,
+				BF71B5311EB9DA98004D6774 /* FJChapterModel.swift in Sources */,
 				5F1FF1EC1DF7CC3400C77CDE /* BaseTheme.swift in Sources */,
 				5F1FF1FB1DF7E42500C77CDE /* LeftTVCell.swift in Sources */,
 				BF0AE6AD1EB8505100A07D58 /* AppDelegate.swift in Sources */,
 				5F1FF1EE1DF7CDE400C77CDE /* LeftViewController.swift in Sources */,
 				5F1FF1C61DF7C43F00C77CDE /* LFJCircleProgressView.m in Sources */,
 				5F1FF1E41DF7C61E00C77CDE /* StackViewController.swift in Sources */,
+				BF71B52B1EB9C457004D6774 /* FJReadConfig.swift in Sources */,
+				BF71B52F1EB9DA84004D6774 /* FJNoteModel.swift in Sources */,
+				BF71B5211EB9A478004D6774 /* FJReadViewController.swift in Sources */,
 				5F1FF1C81DF7C43F00C77CDE /* ZJDrawerController.m in Sources */,
 				5F1FF1E61DF7C98B00C77CDE /* DiscoverViewController.swift in Sources */,
-				BF0AE6B31EB8520600A07D58 /* ReadViewController.swift in Sources */,
 				5F1FF1E01DF7C5FF00C77CDE /* BookShelvesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -830,6 +914,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -879,6 +964,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -907,6 +993,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B6B5DFB7903201DE062A10B /* Pods-QQReader.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EFR9ZBG88M;
 				GCC_PREFIX_HEADER = "";
@@ -924,6 +1011,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDD654AC0D80F0CD0B933A8D /* Pods-QQReader.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EFR9ZBG88M;
 				GCC_PREFIX_HEADER = "";

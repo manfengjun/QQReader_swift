@@ -74,7 +74,7 @@ extension LeftViewController:UITableViewDataSource,UITableViewDelegate{
         cell.titleLabel.text = titleArr[indexPath.row] as? String
         cell.cellIV.image = UIImage(named: (titleImgArr[indexPath.row] as! String))
         if indexPath.row == 4 {
-            cell.titleLabel.textColor = Color(234, g: 149, b: 24)
+            cell.titleLabel.textColor = RGBColor(234, g: 149, b: 24)
         }
         //#ea9518
         return cell

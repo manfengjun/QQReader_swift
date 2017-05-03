@@ -24,6 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainTabbar = storyboard.instantiateViewController(withIdentifier: "mainTabbar")
         let zjdrawerVC = ZJDrawerController(leftController: leftVC, center: mainTabbar)
         self.window?.rootViewController = zjdrawerVC
+
+        let fileUrl = Bundle.main.url(forResource: "修真狂少", withExtension: "txt")
+        do {
+            let str: NSString = try NSString(contentsOf: fileUrl!, encoding: String.Encoding.utf8.rawValue)
+            print(str)
+
+        } catch { }
+        //    NSString *str  = @"1 2 3 4";
         return true
     }
 
