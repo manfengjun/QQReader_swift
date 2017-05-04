@@ -21,21 +21,14 @@ class FJChapterModel: NSObject {
     var title: String?
     var chapterIndex: Int?
     var pageCount: Int?
-    /// MARK: ------ 归档反归档
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(pageArray, forKey:"pageArray")
-        aCoder.encode(content, forKey:"content")
-        aCoder.encode(title, forKey:"title")
-        aCoder.encode(chapterIndex, forKey:"chapterIndex")
-        aCoder.encode(pageCount, forKey:"pageCount")
-    }
-    required init?(coder aDecoder: NSCoder) {
+    
+    override init() {
         super.init()
-        pageArray = (aDecoder.decodeObject(forKey: "pageArray") as? NSMutableArray)!
-        content = aDecoder.decodeObject(forKey: "content") as? String
-        title = aDecoder.decodeObject(forKey: "title") as? String
-        chapterIndex = aDecoder.decodeObject(forKey: "chapterIndex") as? Int
-        pageCount = aDecoder.decodeObject(forKey: "pageCount") as? Int
+    }
+    init(title: String, content: String) {
+        super.init()
+        self.title = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.content = content
     }
     func updateFont() {
         paginateWithBounds(bounds: CGRect(x: LeftSpacing, y: TopSpacing, width: ScreenWidth - LeftSpacing - RightSpacing, height: ScreenHeight - TopSpacing - BottomSpacing))
@@ -102,5 +95,21 @@ class FJChapterModel: NSObject {
         let range = start!..<end!
         return content!.substring(with: range)
     }
-    
+
+    /// MARK: ------ 归档反归档
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(pageArray, forKey:"pageArray")
+        aCoder.encode(content, forKey:"content")
+        aCoder.encode(title, forKey:"title")
+        aCoder.encode(chapterIndex, forKey:"chapterIndex")
+        aCoder.encode(pageCount, forKey:"pageCount")
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init()
+        pageArray = (aDecoder.decodeObject(forKey: "pageArray") as? NSMutableArray)!
+        content = aDecoder.decodeObject(forKey: "content") as? String
+        title = aDecoder.decodeObject(forKey: "title") as? String
+        chapterIndex = aDecoder.decodeObject(forKey: "chapterIndex") as? Int
+        pageCount = aDecoder.decodeObject(forKey: "pageCount") as? Int
+    }
 }

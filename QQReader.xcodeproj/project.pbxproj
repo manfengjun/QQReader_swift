@@ -69,6 +69,7 @@
 		BF71B5311EB9DA98004D6774 /* FJChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5301EB9DA98004D6774 /* FJChapterModel.swift */; };
 		BF71B5331EB9DAAA004D6774 /* FJRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5321EB9DAAA004D6774 /* FJRecordModel.swift */; };
 		BF71B5381EB9E874004D6774 /* FJReadUtilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5371EB9E874004D6774 /* FJReadUtilites.swift */; };
+		BF7E1D191EBAB4CC0027C5CB /* 测试.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF7E1D181EBAB4CC0027C5CB /* 测试.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		BF71B5301EB9DA98004D6774 /* FJChapterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJChapterModel.swift; sourceTree = "<group>"; };
 		BF71B5321EB9DAAA004D6774 /* FJRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJRecordModel.swift; sourceTree = "<group>"; };
 		BF71B5371EB9E874004D6774 /* FJReadUtilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadUtilites.swift; sourceTree = "<group>"; };
+		BF7E1D181EBAB4CC0027C5CB /* 测试.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "测试.txt"; sourceTree = "<group>"; };
 		EDD654AC0D80F0CD0B933A8D /* Pods-QQReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -555,6 +557,7 @@
 				BF71B50C1EB95E01004D6774 /* 细说明朝.txt */,
 				BF71B50D1EB95E01004D6774 /* 重启霸道人生.txt */,
 				BF71B50E1EB95E01004D6774 /* 重生富贵在仙.txt */,
+				BF7E1D181EBAB4CC0027C5CB /* 测试.txt */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -748,6 +751,7 @@
 				5F1FF2051DF7ED2200C77CDE /* left_liwu.png in Resources */,
 				BF71B5131EB95E01004D6774 /* 重生富贵在仙.txt in Resources */,
 				5F1FF2091DF7F3FA00C77CDE /* head.jpg in Resources */,
+				BF7E1D191EBAB4CC0027C5CB /* 测试.txt in Resources */,
 				5F4AE5171DF8066100BF557F /* icon_small_mask.png in Resources */,
 				BF0AE6B01EB8507E00A07D58 /* LaunchScreen.storyboard in Resources */,
 				5F1FF2071DF7ED2200C77CDE /* left_zhanghu.png in Resources */,

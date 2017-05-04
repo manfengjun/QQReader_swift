@@ -103,7 +103,8 @@ class BookShelvesViewController: UIViewController {
         if segue.identifier == "readerSegueID"{
             let indexPath = sender as! NSIndexPath
             let readVC = segue.destination as? FJReadPageViewController
-            let fileUrl = Bundle.main.url(forResource: self.booksArray[indexPath.row] as? String, withExtension: "txt")
+            let fileUrl = Bundle.main.path(forResource: self.booksArray[indexPath.row] as? String, ofType: "txt")
+            readVC?.readModel = FJReadModel.getLocalModel(url: fileUrl!)
             readVC?.resourceURL = fileUrl
         }
     }
