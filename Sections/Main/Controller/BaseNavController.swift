@@ -1,25 +1,25 @@
 //
-//  MainTabBarController.swift
+//  BaseNavController.swift
 //  QQReader
 //
-//  Created by huwei on 2016/12/7.
-//  Copyright © 2016年 JUN. All rights reserved.
+//  Created by jun on 2017/5/5.
+//  Copyright © 2017年 JUN. All rights reserved.
 //
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class BaseNavController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+
         // Do any additional setup after loading the view.
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

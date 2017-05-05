@@ -33,14 +33,19 @@ class BookShelvesViewController: UIViewController {
         button.layer.borderWidth = 1
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(showLeftDraw), for: UIControlEvents.touchUpInside)
         return button
     }()
-    
+    func showLeftDraw(sender: UIButton) {
+        print("sdfds")
+        zjdrawerVC?.slidingLeftDrawer()
+    }
     /// 刷新数据
     func refreshData() {
-        self.booksArray .removeAllObjects();
-        let header = MJRefreshDiyHeader { 
+        let header = MJRefreshDiyHeader {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.booksArray.removeAllObjects()
+
                 self.getBooksUrl();
                 //刷新
                 self.tableView.reloadData()
@@ -82,10 +87,12 @@ class BookShelvesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.view.insertSubview(self.refreshBgView, belowSubview: self.tableView)
 
         createNavItem()
-        self.navigationController?.navigationBar.isTranslucent = true;
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.barTintColor = UIColor.orange
         self.navigationController?.navigationBar.subviews[0].alpha = 0
     }

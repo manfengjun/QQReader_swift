@@ -13,13 +13,14 @@ class FJReadView: UIView {
     var frameRef:CTFrame?
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.white
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     override func draw(_ rect: CGRect) {
+        //绘制阅读文字视图
         let ctx = UIGraphicsGetCurrentContext()
         ctx?.textMatrix = CGAffineTransform.identity
         ctx?.translateBy(x: 0, y: self.bounds.size.height)

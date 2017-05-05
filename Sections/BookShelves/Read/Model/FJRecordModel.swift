@@ -18,6 +18,10 @@ class FJRecordModel: NSObject,NSCoding {
     //阅读章节
     var chapterModel: FJChapterModel?
     override init() {
+        page = 0
+        chapter = 0
+        chapterCount = 0
+        chapterModel = FJChapterModel()
         super.init()
     }
     func encode(with aCoder: NSCoder) {

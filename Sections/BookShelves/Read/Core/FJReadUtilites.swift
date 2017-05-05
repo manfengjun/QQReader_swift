@@ -13,6 +13,8 @@ class FJReadUtilites: NSObject {
     class func separateChapter(content: String) -> NSMutableArray{
         let contentStr = NSString(string: content)
         let chapterModels = NSMutableArray()
+
+//        第[0-9一二三四五六七八九十百千]*[章回].*
         //筛选目录
         let regPattern = "(\\s)+[第]{0,1}[0-9一二三四五六七八九十百千万]+[章回节卷集幕计][ \t]*(\\S)*"
         var regExp: NSRegularExpression?
@@ -27,25 +29,27 @@ class FJReadUtilites: NSObject {
                 let local = range.location
                 if index == 0 {
                     //第一章
+                    let model = FJChapterModel()
+
                     let len = local
-                    let title = "开始"
-                    let content = contentStr.substring(with: NSMakeRange(0, len))
-                    let model = FJChapterModel(title: title, content: content)
+                    model.title = "开始"
+                    model.content = contentStr.substring(with: NSMakeRange(0, len))
+                    chapterModels.add(model)
+                }
+                else if index > 0{
+                    //获取章节内容和标题
+                    let model = FJChapterModel()
+                    model.title = contentStr.substring(with: lastRange)
+                    let len = local - lastRange.location
+                    model.content = contentStr.substring(with: NSMakeRange(lastRange.location, len))
                     chapterModels.add(model)
                 }
                 else if index == matchs.count - 1 {
-                    //获取章节内容和标题
-                    let title = contentStr.substring(with: range)
-                    let content = contentStr.substring(with: NSMakeRange(local, contentStr.length - local))
-                    let model = FJChapterModel(title: title, content: content)
-                    chapterModels.add(model)
-                }
-                else {
                     //获取最后一章
-                    let title = contentStr.substring(with: range)
-                    let len = local - lastRange.location
-                    let content = contentStr.substring(with: NSMakeRange(lastRange.location, len))
-                    let model = FJChapterModel(title: title, content: content)
+                    let model = FJChapterModel()
+                    
+                    model.title = contentStr.substring(with: range)
+                    model.content = contentStr.substring(with: NSMakeRange(local, contentStr.length - local))
                     chapterModels.add(model)
                 }
                 lastRange = range
@@ -61,17 +65,16 @@ class FJReadUtilites: NSObject {
     }
     // MARK: ------ 获取Txt文件内容
     class func encode(url:String) -> String {
-        let fileUrl = Bundle.main.path(forResource: url, ofType: "txt")
         var bookStr: String?
         do {
             //中文编码
             let enc = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(CFStringEncodings.GB_18030_2000.rawValue))
-            bookStr = try String(contentsOfFile: fileUrl!, encoding: String.Encoding(rawValue: enc))
+            bookStr = try String(contentsOfFile: url, encoding: String.Encoding(rawValue: enc))
         } catch{}
         if bookStr == nil {
             do {
                 //utf8编码
-                bookStr = try String(contentsOfFile: fileUrl!, encoding: String.Encoding.utf8)
+                bookStr = try String(contentsOfFile: url, encoding: String.Encoding.utf8)
             } catch{}
         }
         return bookStr!

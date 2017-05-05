@@ -11,15 +11,18 @@ import UIKit
 
 class FJReadViewController: UIViewController {
     var content: String?
+    var recordModel: FJRecordModel?
     lazy var readView:FJReadView = {
-        let readView = FJReadView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
+        let readView = FJReadView(frame: CGRect(x: LeftSpacing, y: TopSpacing, width: self.view.frame.size.width-LeftSpacing-RightSpacing, height: self.view.frame.size.height-TopSpacing-BottomSpacing))
         let config = FJReadConfig.shareInstance
-        readView.frameRef = FJReaderParser().parserContent(content: self.content!, config: config, bounds: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
+        readView.frameRef = FJReaderParser().parserContent(content: self.content!, config: config, bounds: CGRect(x: 0, y: 0, width: readView.frame.size.width, height: readView.frame.size.height))
         readView.content = self.content!
         return readView
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.view.backgroundColor = UIColor.white
         self.view.addSubview(readView)
         // Do any additional setup after loading the view.
     }

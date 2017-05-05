@@ -30,6 +30,7 @@ class LeftViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+
     func commoninit() {
         headIV.layer.masksToBounds = true
         headIV.layer.cornerRadius = 25

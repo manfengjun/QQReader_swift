@@ -44,7 +44,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="119" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lwc-xV-4Gb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="bookShelvesTVCell" rowHeight="119" id="6R9-ai-xU4" customClass="BookShelvesTVCell" customModule="QQReader" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="119"/>
@@ -129,9 +129,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="h4b-Oz-ToW" firstAttribute="top" secondItem="Lwc-xV-4Gb" secondAttribute="bottom" id="2Ys-LW-Iqy"/>
                             <constraint firstItem="Lwc-xV-4Gb" firstAttribute="leading" secondItem="Wps-wd-sJs" secondAttribute="leading" id="2xC-cf-a8i"/>
                             <constraint firstAttribute="trailing" secondItem="Lwc-xV-4Gb" secondAttribute="trailing" id="NiI-4D-Wbg"/>
-                            <constraint firstItem="h4b-Oz-ToW" firstAttribute="top" secondItem="Lwc-xV-4Gb" secondAttribute="bottom" id="p5x-ea-Afn"/>
                             <constraint firstItem="Lwc-xV-4Gb" firstAttribute="top" secondItem="Wps-wd-sJs" secondAttribute="top" id="zJt-Y8-tQC"/>
                         </constraints>
                     </view>
@@ -200,6 +200,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <segue destination="Kyn-xw-Mdo" kind="show" id="eef-c3-AX1"/>
                     </connections>
@@ -524,7 +525,7 @@
         <!--书架-->
         <scene sceneID="i5c-rr-4AV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qn9-hX-XzT" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qn9-hX-XzT" customClass="BaseNavController" customModule="QQReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="书架" image="tabbar_book_library" selectedImage="tabbar_book_library_hl" id="7KF-gG-YrV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5kd-lg-rdQ">

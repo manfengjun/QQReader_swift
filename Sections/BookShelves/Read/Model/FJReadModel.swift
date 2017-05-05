@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FJReadModel: NSObject {
+class FJReadModel: NSObject,NSCoding {
     var resource: String?
     var content: String?
     var fjMarkModels: NSMutableArray?
@@ -22,12 +22,12 @@ class FJReadModel: NSObject {
     }
     init(content: String) {
         self.content = content
-        self.fjChapterModels = NSMutableArray()
+        self.fjChapterModels = FJReadUtilites.separateChapter(content: content)
         self.fjMarkModels = NSMutableArray()
         self.fjNoteModels = NSMutableArray()
         self.record = FJRecordModel()
         self.record?.chapterModel = fjChapterModels?.firstObject as? FJChapterModel
-        self.record?.chapterCount = fjChapterModels?.count
+        self.record?.chapterCount = (fjChapterModels?.count)!
         self.marksRecord = NSMutableDictionary()
         self.font = FJReadConfig.shareInstance.fontSize
     }
@@ -37,7 +37,7 @@ class FJReadModel: NSObject {
         self.fjNoteModels = NSMutableArray()
         self.record = FJRecordModel()
         self.record?.chapterModel = fjChapterModels?.firstObject as? FJChapterModel
-        self.record?.chapterCount = fjChapterModels?.count
+        self.record?.chapterCount = (fjChapterModels?.count)!
         self.marksRecord = NSMutableDictionary()
         self.font = FJReadConfig.shareInstance.fontSize
 
@@ -94,19 +94,20 @@ class FJReadModel: NSObject {
     class func getLocalModel(url: String) -> FJReadModel{
         let key = NSString(string: url).lastPathComponent
         let data = UserDefaults.standard.object(forKey: key)
-        if data == nil {
+        if data == nil{
             if key.hasSuffix("txt"){
                 let model = FJReadModel(content: FJReadUtilites.encode(url: url))
                 model.resource = url
                 FJReadModel.updateLocalModel(readModel: model, url: url)
                 return model
             }
-        }
-        else if key.hasSuffix("epub"){
-            
-        }
-        else{
-            print("异常")
+            else if key.hasSuffix("epub"){
+                
+            }
+            else{
+                print("异常")
+            }
+
         }
         let unarchive = NSKeyedUnarchiver(forReadingWith: data as! Data)
         let model = unarchive.decodeObject(forKey: key) as! FJReadModel

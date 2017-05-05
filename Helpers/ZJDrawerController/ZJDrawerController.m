@@ -101,7 +101,7 @@ typedef NS_ENUM(NSInteger, ZJDrawerControllerType) {
     [self.view addSubview:self.centerContentView];
     // 添加手势到centerContentView上面, 因为我们希望只有内容的vie上面能够响应手势
     // 手势的初始化我们使用了懒加载
-    [self.centerContentView addGestureRecognizer:self.panGesture];
+//    [self.centerContentView addGestureRecognizer:self.panGesture];
     [self.centerContentView addGestureRecognizer:self.tapGesture];
     /// 添加子控制器
     [self addDrawerViewController:_leftController];
@@ -201,7 +201,6 @@ typedef NS_ENUM(NSInteger, ZJDrawerControllerType) {
 
 - (void)slidingLeftDrawer {
     if (self.isLeftDrawerOpen) {// 已经打开
-        [self.maskView removeFromSuperview];
         [self closeLeftDrawerAniamted:YES finishHandler:nil];
     }
     else {
@@ -252,6 +251,7 @@ typedef NS_ENUM(NSInteger, ZJDrawerControllerType) {
 
 - (void)closeLeftDrawerAniamted:(BOOL)animated finishHandler:(FinishHandler)finishHandler {
     if (_leftController) {
+        [self.maskView removeFromSuperview];
         CGFloat duration = animated ? 0.25 : 0.0f;
 
         [_leftController beginAppearanceTransition:NO animated:YES];

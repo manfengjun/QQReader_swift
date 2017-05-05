@@ -1,3 +1,4 @@
+
 //
 //  FJChapterModel.swift
 //  QQReader
@@ -8,13 +9,13 @@
 
 import UIKit
 
-class FJChapterModel: NSObject {
+class FJChapterModel: NSObject,NSCoding {
     lazy var pageArray:NSMutableArray = {
         let pageArray = NSMutableArray()
         return pageArray
     }()
     var content: String?{
-        didSet {
+        willSet {
             paginateWithBounds(bounds: CGRect(x: LeftSpacing, y: TopSpacing, width: ScreenWidth - LeftSpacing - RightSpacing, height: ScreenHeight - TopSpacing - BottomSpacing))
         }
     }
@@ -23,16 +24,17 @@ class FJChapterModel: NSObject {
     var pageCount: Int?
     
     override init() {
+        chapterIndex = 0
+        pageCount = 0
+        title = ""
+        content = ""
         super.init()
     }
-    init(title: String, content: String) {
-        super.init()
-        self.title = title.trimmingCharacters(in: .whitespacesAndNewlines)
-        self.content = content
-    }
+    // MARK: ------ 更新字体
     func updateFont() {
         paginateWithBounds(bounds: CGRect(x: LeftSpacing, y: TopSpacing, width: ScreenWidth - LeftSpacing - RightSpacing, height: ScreenHeight - TopSpacing - BottomSpacing))
     }
+    // MARK: ------ 更新阅读视图显示区域位置
     func paginateWithBounds(bounds:CGRect) {
         pageArray.removeAllObjects()
         let attrString = NSMutableAttributedString(string: content!)
@@ -78,25 +80,25 @@ class FJChapterModel: NSObject {
             {
                 hasMorePages = false
             }
-            pageCount = pageArray.count
         }
+        pageCount = pageArray.count
     }
+    // MARK: ------ 获取当前页面文字内容
     func stringOfPage(index: Int) -> String {
         let local = pageArray[index] as! Int
-        var length: Int?
+        var length: Int = 0
         if index < pageCount! - 1 {
             length = (pageArray[index + 1] as! Int) - (pageArray[index] as! Int)
         }
         else {
             length = (content! as NSString).length - (pageArray[index] as! Int)
         }
-        let start = content?.index(content!.startIndex, offsetBy: local)
-        let end = content?.index(start!, offsetBy: length!)
-        let range = start!..<end!
-        return content!.substring(with: range)
+        
+        let nscontent = NSString(string: content!)
+        return nscontent.substring(with: NSMakeRange(local, length))
     }
-
-    /// MARK: ------ 归档反归档
+    
+    // MARK: ------ 归档反归档
     func encode(with aCoder: NSCoder) {
         aCoder.encode(pageArray, forKey:"pageArray")
         aCoder.encode(content, forKey:"content")

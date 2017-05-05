@@ -39,6 +39,8 @@
 		5F4E26681DFE98F30083B413 /* feedflow_refresh_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E26671DFE98F30083B413 /* feedflow_refresh_bg@3x.png */; };
 		5F945B881DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */; };
 		949E1860568574CB825F89F9 /* Pods_QQReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970876D4178D94DF41DB6784 /* Pods_QQReader.framework */; };
+		BF0A8A691EBC5AA500BF17BF /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A8A681EBC5AA500BF17BF /* BaseNavController.swift */; };
+		BF0A8A6B1EBC653600BF17BF /* BaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A8A6A1EBC653600BF17BF /* BaseConfig.swift */; };
 		BF0AE6AD1EB8505100A07D58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0AE6AC1EB8505100A07D58 /* AppDelegate.swift */; };
 		BF0AE6B01EB8507E00A07D58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE6AE1EB8507E00A07D58 /* LaunchScreen.storyboard */; };
 		BF0AE6B11EB8507E00A07D58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE6AF1EB8507E00A07D58 /* Main.storyboard */; };
@@ -133,6 +135,8 @@
 		5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJRefreshDiyHeader.swift; sourceTree = "<group>"; };
 		970876D4178D94DF41DB6784 /* Pods_QQReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6B5DFB7903201DE062A10B /* Pods-QQReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.debug.xcconfig"; sourceTree = "<group>"; };
+		BF0A8A681EBC5AA500BF17BF /* BaseNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
+		BF0A8A6A1EBC653600BF17BF /* BaseConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConfig.swift; sourceTree = "<group>"; };
 		BF0AE6AC1EB8505100A07D58 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF0AE6AE1EB8507E00A07D58 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF0AE6AF1EB8507E00A07D58 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				5F1FF1EB1DF7CC3400C77CDE /* BaseTheme.swift */,
+				BF0A8A6A1EBC653600BF17BF /* BaseConfig.swift */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			children = (
 				5F1FF1ED1DF7CDE400C77CDE /* LeftViewController.swift */,
 				5F1FF1EF1DF7CE0000C77CDE /* MainTabBarController.swift */,
+				BF0A8A681EBC5AA500BF17BF /* BaseNavController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -856,10 +862,12 @@
 				5F1FF1EC1DF7CC3400C77CDE /* BaseTheme.swift in Sources */,
 				5F1FF1FB1DF7E42500C77CDE /* LeftTVCell.swift in Sources */,
 				BF0AE6AD1EB8505100A07D58 /* AppDelegate.swift in Sources */,
+				BF0A8A691EBC5AA500BF17BF /* BaseNavController.swift in Sources */,
 				5F1FF1EE1DF7CDE400C77CDE /* LeftViewController.swift in Sources */,
 				5F1FF1C61DF7C43F00C77CDE /* LFJCircleProgressView.m in Sources */,
 				5F1FF1E41DF7C61E00C77CDE /* StackViewController.swift in Sources */,
 				BF71B52B1EB9C457004D6774 /* FJReadConfig.swift in Sources */,
+				BF0A8A6B1EBC653600BF17BF /* BaseConfig.swift in Sources */,
 				BF71B52F1EB9DA84004D6774 /* FJNoteModel.swift in Sources */,
 				BF71B5211EB9A478004D6774 /* FJReadViewController.swift in Sources */,
 				5F1FF1C81DF7C43F00C77CDE /* ZJDrawerController.m in Sources */,
