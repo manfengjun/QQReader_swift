@@ -16,7 +16,9 @@ class FJReadUtilites: NSObject {
 
 //        第[0-9一二三四五六七八九十百千]*[章回].*
         //筛选目录
-        let regPattern = "(\\s)+[第]{0,1}[0-9一二三四五六七八九十百千万]+[章回节卷集幕计][ \t]*(\\S)*"
+        let regPattern = "第[0-9一二三四五六七八九十百千]*[章回].*"
+
+//        let regPattern = "(\\s)+[第]{0,1}[0-9一二三四五六七八九十百千万]+[章回节卷集幕计][ \t]*(\\S)*"
         var regExp: NSRegularExpression?
         do {
             regExp = try NSRegularExpression(pattern: regPattern, options: NSRegularExpression.Options.caseInsensitive)

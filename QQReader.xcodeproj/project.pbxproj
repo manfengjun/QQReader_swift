@@ -54,11 +54,12 @@
 		BF0AE7951EB8856600A07D58 /* book_default_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE7941EB8856600A07D58 /* book_default_cover.png */; };
 		BF0AE7991EB88B4B00A07D58 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0AE7981EB88B4B00A07D58 /* libxml2.2.tbd */; };
 		BF0AE79B1EB88BD600A07D58 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0AE79A1EB88BD600A07D58 /* libz.tbd */; };
-		BF71B50F1EB95E01004D6774 /* 修真狂少.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF71B50A1EB95E01004D6774 /* 修真狂少.txt */; };
-		BF71B5101EB95E01004D6774 /* 武道宗师.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF71B50B1EB95E01004D6774 /* 武道宗师.txt */; };
-		BF71B5111EB95E01004D6774 /* 细说明朝.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF71B50C1EB95E01004D6774 /* 细说明朝.txt */; };
-		BF71B5121EB95E01004D6774 /* 重启霸道人生.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF71B50D1EB95E01004D6774 /* 重启霸道人生.txt */; };
-		BF71B5131EB95E01004D6774 /* 重生富贵在仙.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF71B50E1EB95E01004D6774 /* 重生富贵在仙.txt */; };
+		BF6F982C1EBDD28E0060415F /* 测试.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98261EBDD28E0060415F /* 测试.txt */; };
+		BF6F982D1EBDD28E0060415F /* 武道宗师.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98271EBDD28E0060415F /* 武道宗师.txt */; };
+		BF6F982E1EBDD28E0060415F /* 细说明朝.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98281EBDD28E0060415F /* 细说明朝.txt */; };
+		BF6F982F1EBDD28E0060415F /* 修真狂少.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98291EBDD28E0060415F /* 修真狂少.txt */; };
+		BF6F98301EBDD28E0060415F /* 重启霸道人生.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F982A1EBDD28E0060415F /* 重启霸道人生.txt */; };
+		BF6F98311EBDD28E0060415F /* 重生富贵在仙.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F982B1EBDD28E0060415F /* 重生富贵在仙.txt */; };
 		BF71B5201EB9A478004D6774 /* FJReadPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B51B1EB9A478004D6774 /* FJReadPageViewController.swift */; };
 		BF71B5211EB9A478004D6774 /* FJReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B51C1EB9A478004D6774 /* FJReadViewController.swift */; };
 		BF71B5221EB9A478004D6774 /* FJReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B51E1EB9A478004D6774 /* FJReadModel.swift */; };
@@ -71,7 +72,6 @@
 		BF71B5311EB9DA98004D6774 /* FJChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5301EB9DA98004D6774 /* FJChapterModel.swift */; };
 		BF71B5331EB9DAAA004D6774 /* FJRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5321EB9DAAA004D6774 /* FJRecordModel.swift */; };
 		BF71B5381EB9E874004D6774 /* FJReadUtilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71B5371EB9E874004D6774 /* FJReadUtilites.swift */; };
-		BF7E1D191EBAB4CC0027C5CB /* 测试.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF7E1D181EBAB4CC0027C5CB /* 测试.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,11 +151,12 @@
 		BF0AE7961EB88B3A00A07D58 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		BF0AE7981EB88B4B00A07D58 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		BF0AE79A1EB88BD600A07D58 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		BF71B50A1EB95E01004D6774 /* 修真狂少.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "修真狂少.txt"; sourceTree = "<group>"; };
-		BF71B50B1EB95E01004D6774 /* 武道宗师.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "武道宗师.txt"; sourceTree = "<group>"; };
-		BF71B50C1EB95E01004D6774 /* 细说明朝.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细说明朝.txt"; sourceTree = "<group>"; };
-		BF71B50D1EB95E01004D6774 /* 重启霸道人生.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "重启霸道人生.txt"; sourceTree = "<group>"; };
-		BF71B50E1EB95E01004D6774 /* 重生富贵在仙.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "重生富贵在仙.txt"; sourceTree = "<group>"; };
+		BF6F98261EBDD28E0060415F /* 测试.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "测试.txt"; sourceTree = "<group>"; };
+		BF6F98271EBDD28E0060415F /* 武道宗师.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "武道宗师.txt"; sourceTree = "<group>"; };
+		BF6F98281EBDD28E0060415F /* 细说明朝.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细说明朝.txt"; sourceTree = "<group>"; };
+		BF6F98291EBDD28E0060415F /* 修真狂少.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "修真狂少.txt"; sourceTree = "<group>"; };
+		BF6F982A1EBDD28E0060415F /* 重启霸道人生.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "重启霸道人生.txt"; sourceTree = "<group>"; };
+		BF6F982B1EBDD28E0060415F /* 重生富贵在仙.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "重生富贵在仙.txt"; sourceTree = "<group>"; };
 		BF71B51B1EB9A478004D6774 /* FJReadPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadPageViewController.swift; sourceTree = "<group>"; };
 		BF71B51C1EB9A478004D6774 /* FJReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadViewController.swift; sourceTree = "<group>"; };
 		BF71B51E1EB9A478004D6774 /* FJReadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadModel.swift; sourceTree = "<group>"; };
@@ -168,7 +169,6 @@
 		BF71B5301EB9DA98004D6774 /* FJChapterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJChapterModel.swift; sourceTree = "<group>"; };
 		BF71B5321EB9DAAA004D6774 /* FJRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJRecordModel.swift; sourceTree = "<group>"; };
 		BF71B5371EB9E874004D6774 /* FJReadUtilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJReadUtilites.swift; sourceTree = "<group>"; };
-		BF7E1D181EBAB4CC0027C5CB /* 测试.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "测试.txt"; sourceTree = "<group>"; };
 		EDD654AC0D80F0CD0B933A8D /* Pods-QQReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -558,12 +558,12 @@
 		BF71B5091EB95E01004D6774 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				BF71B50A1EB95E01004D6774 /* 修真狂少.txt */,
-				BF71B50B1EB95E01004D6774 /* 武道宗师.txt */,
-				BF71B50C1EB95E01004D6774 /* 细说明朝.txt */,
-				BF71B50D1EB95E01004D6774 /* 重启霸道人生.txt */,
-				BF71B50E1EB95E01004D6774 /* 重生富贵在仙.txt */,
-				BF7E1D181EBAB4CC0027C5CB /* 测试.txt */,
+				BF6F98261EBDD28E0060415F /* 测试.txt */,
+				BF6F98271EBDD28E0060415F /* 武道宗师.txt */,
+				BF6F98281EBDD28E0060415F /* 细说明朝.txt */,
+				BF6F98291EBDD28E0060415F /* 修真狂少.txt */,
+				BF6F982A1EBDD28E0060415F /* 重启霸道人生.txt */,
+				BF6F982B1EBDD28E0060415F /* 重生富贵在仙.txt */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -741,30 +741,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6F982C1EBDD28E0060415F /* 测试.txt in Resources */,
 				5F1FF2041DF7ED2200C77CDE /* left_lishi.png in Resources */,
 				5F4AE51D1DF80E1700BF557F /* 150.jpeg in Resources */,
 				BF0AE7601EB8852C00A07D58 /* bg_back_white@2x.png in Resources */,
+				BF6F982D1EBDD28E0060415F /* 武道宗师.txt in Resources */,
 				5F4AE5191DF8087E00BF557F /* notification_icon_newbie_present@2x.png in Resources */,
-				BF71B5101EB95E01004D6774 /* 武道宗师.txt in Resources */,
 				5F1FF2031DF7ED2200C77CDE /* left_baoyue.png in Resources */,
+				BF6F982F1EBDD28E0060415F /* 修真狂少.txt in Resources */,
 				5F1FF1F71DF7DEF000C77CDE /* left_jiantou.png in Resources */,
 				BF0AE75F1EB8852C00A07D58 /* bg_back_white.png in Resources */,
 				BF0AE7651EB8852C00A07D58 /* sale_discount_yellow.png in Resources */,
 				BF0AE7631EB8852C00A07D58 /* reader_cover@2x.png in Resources */,
+				BF6F98301EBDD28E0060415F /* 重启霸道人生.txt in Resources */,
+				BF6F982E1EBDD28E0060415F /* 细说明朝.txt in Resources */,
 				5F1FF1941DF7BD5300C77CDE /* Assets.xcassets in Resources */,
-				BF71B5111EB95E01004D6774 /* 细说明朝.txt in Resources */,
 				BF0AE6B11EB8507E00A07D58 /* Main.storyboard in Resources */,
 				5F1FF2051DF7ED2200C77CDE /* left_liwu.png in Resources */,
-				BF71B5131EB95E01004D6774 /* 重生富贵在仙.txt in Resources */,
 				5F1FF2091DF7F3FA00C77CDE /* head.jpg in Resources */,
-				BF7E1D191EBAB4CC0027C5CB /* 测试.txt in Resources */,
 				5F4AE5171DF8066100BF557F /* icon_small_mask.png in Resources */,
+				BF6F98311EBDD28E0060415F /* 重生富贵在仙.txt in Resources */,
 				BF0AE6B01EB8507E00A07D58 /* LaunchScreen.storyboard in Resources */,
 				5F1FF2071DF7ED2200C77CDE /* left_zhanghu.png in Resources */,
 				BF0AE7951EB8856600A07D58 /* book_default_cover.png in Resources */,
-				BF71B5121EB95E01004D6774 /* 重启霸道人生.txt in Resources */,
 				5F1FF1F91DF7DFB200C77CDE /* left_horn.png in Resources */,
-				BF71B50F1EB95E01004D6774 /* 修真狂少.txt in Resources */,
 				BF0AE7611EB8852C00A07D58 /* ic_add.png in Resources */,
 				BF0AE7621EB8852C00A07D58 /* r_drag-dot@2x.png in Resources */,
 				5F1FF2061DF7ED2200C77CDE /* left_xiaoxi.png in Resources */,

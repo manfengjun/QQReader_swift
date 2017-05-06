@@ -24,6 +24,7 @@ extension NSObject
         return shapeLayer
     }
 }
+
 class NSobjectExtension: NSObject {
 
 }

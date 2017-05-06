@@ -62,13 +62,15 @@ class BookShelvesViewController: UIViewController {
         let path = Bundle.main.bundlePath
         let fileManager = FileManager.default
         let fileArray = fileManager.subpaths(atPath: path)
-        for fb in fileArray! {
-            if fb.hasSuffix(".txt") {
-                let index = fb.index(fb.endIndex, offsetBy: -4)
-                self.booksArray.add(fb.substring(to: index))
-                print(fb);
+//        if let array = fileArray {
+            for fb in fileArray! {
+                if fb.hasSuffix(".txt") {
+                    let index = fb.index(fb.endIndex, offsetBy: -4)
+                    self.booksArray.add(fb.substring(to: index))
+                    print(fb);
+                }
             }
-        }
+//        }
     }
     
     override func viewDidLoad() {
@@ -111,8 +113,10 @@ class BookShelvesViewController: UIViewController {
             let indexPath = sender as! NSIndexPath
             let readVC = segue.destination as? FJReadPageViewController
             let fileUrl = Bundle.main.path(forResource: self.booksArray[indexPath.row] as? String, ofType: "txt")
-            readVC?.readModel = FJReadModel.getLocalModel(url: fileUrl!)
-            readVC?.resourceURL = fileUrl
+            if let url = fileUrl {
+                readVC?.readModel = FJReadModel.getLocalModel(url: url)
+                readVC?.resourceURL = url
+            }
         }
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YYModel
 class FJReadPageViewController: UIViewController {
     var chapter: Int?                       //当前显示的章节
     var page: Int?                          //当前显示的页数
@@ -139,6 +140,7 @@ extension FJReadPageViewController: UIPageViewControllerDelegate,UIPageViewContr
         readVC?.content = (readModel?.fjChapterModels?[chapter] as! FJChapterModel).stringOfPage(index: page)
         return readVC!
     }
+    // MARK: ------ 更新翻页数据
     func updateReadModel(chapter: Int, page: Int) {
         self.chapter = chapter
         self.page = page
@@ -148,5 +150,4 @@ extension FJReadPageViewController: UIPageViewControllerDelegate,UIPageViewContr
         readModel?.font = FJReadConfig.shareInstance.fontSize
         FJReadModel.updateLocalModel(readModel: readModel!, url: resourceURL!)
     }
-    
 }
