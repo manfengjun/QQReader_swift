@@ -12,8 +12,15 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.selectedIndex = 0
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
+    }
+    override var childViewControllerForStatusBarStyle: UIViewController?{
+        return self.selectedViewController
+    }
+    override var childViewControllerForStatusBarHidden: UIViewController?{
+        return self.selectedViewController
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -109,11 +109,14 @@ typedef NS_ENUM(NSInteger, ZJDrawerControllerType) {
     [self addCenterViewController:_centerController];
     
 }
-- (UIStatusBarStyle)preferredStatusBarStyle
+- (UIViewController *)childViewControllerForStatusBarHidden
 {
-    return [self.centerController preferredStatusBarStyle];
+    return self.centerController;
 }
-
+- (UIViewController *)childViewControllerForStatusBarStyle
+{
+    return self.centerController;
+}
 /// 返回NO 手动控制controller的生命周期方法的调用
 - (BOOL)shouldAutomaticallyForwardAppearanceMethods {
     return NO;

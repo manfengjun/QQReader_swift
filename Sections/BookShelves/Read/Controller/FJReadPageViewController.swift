@@ -8,7 +8,7 @@
 
 import UIKit
 import YYModel
-class FJReadPageViewController: UIViewController {
+class FJReadPageViewController: BaseViewController {
     var chapter: Int?                       //当前显示的章节
     var page: Int?                          //当前显示的页数
     var chapterChange: Int?                 //将要变化的章节
@@ -17,6 +17,8 @@ class FJReadPageViewController: UIViewController {
     var resourceURL: String?
     var readVC: FJReadViewController?       //当前阅读视图
     var readModel: FJReadModel?             //阅读对象
+    var statusBarHidden = true             //是否显示状态栏
+    
     ///翻页控制器
     lazy var pageController:UIPageViewController = {
         let pageController = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.pageCurl, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal, options: nil)
@@ -24,26 +26,31 @@ class FJReadPageViewController: UIViewController {
         pageController.dataSource = self
         return pageController
     }()
+    lazy var tapGesture:UITapGestureRecognizer = {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(FJReadPageViewController.showToolMenu))
+        return tap
+    }()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.shared.isStatusBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.navigationBar.barTintColor = RGBColor(r: 0, g: 0, b: 0, a: 0.3)
 
-        self.navigationController?.navigationBar.isHidden = true
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-
-        UIApplication.shared.isStatusBarHidden = false
-        
-        self.navigationController?.navigationBar.isHidden = false
-        
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.subviews[0].alpha = 0
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupMenuView()
         //添加阅读控制视图
         view.addSubview(pageController.view)
         addChildViewController(pageController)
+//        navigationController?.barHideOnTapGestureRecognizer.addTarget(self, action: #selector(FJReadPageViewController.showToolMenu))
+        view.addGestureRecognizer(tapGesture)
+
         //设置第一页
         pageController.setViewControllers([self.readVC(chapter: (readModel?.record?.chapter)!, page: (readModel?.record?.chapter)!)], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
         //初始化属性
@@ -61,19 +68,29 @@ class FJReadPageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: ------ 功能菜单
+    func setupMenuView() {
+        setBackButtonInNav(imageUrl: "nav_back_white.png", action: #selector(FJReadPageViewController.dismissvc))
+        setRightButtonInNav(imageUrl: "nav_more_white.png", action: #selector(FJReadPageViewController.dismissvc))
+        let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight - 49, width: ScreenWidth, height: 49))
+        UIApplication.shared.keyWindow?.addSubview(bottomMenuView)
     }
-    */
+    // MARK: ------ 手势
+    func showToolMenu() {
+        navigationController?.navigationBar.subviews[0].alpha = 1
+        statusBarHidden = statusBarHidden ? false : true
+        navigationController?.setNavigationBarHidden(statusBarHidden, animated: true)
+        setNeedsStatusBarAppearanceUpdate()
+        
+    }
 
+    // MARK: ------ 设置是否显示状态栏
+    override var prefersStatusBarHidden: Bool{
+        return statusBarHidden
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return UIStatusBarStyle.default
+    }
 }
 extension FJReadPageViewController: UIPageViewControllerDelegate,UIPageViewControllerDataSource{
     // MARK: ------ UIPageViewController DataSource

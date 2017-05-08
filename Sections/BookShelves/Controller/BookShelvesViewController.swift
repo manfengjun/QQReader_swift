@@ -89,16 +89,19 @@ class BookShelvesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.view.insertSubview(self.refreshBgView, belowSubview: self.tableView)
-
         createNavItem()
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.barTintColor = UIColor.orange
         self.navigationController?.navigationBar.subviews[0].alpha = 0
     }
-    
+    override var prefersStatusBarHidden: Bool{
+        return false
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return UIStatusBarStyle.default
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 //        self.tableView.mj_header.endRefreshing()

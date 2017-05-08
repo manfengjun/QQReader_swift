@@ -13,7 +13,7 @@ class MJRefreshDiyHeader: MJRefreshStateHeader {
         let center = CGPoint(x: 15, y: 15)
         let shaplayer = CAShapeLayer()
         shaplayer.path = UIBezierPath(arcCenter: CGPoint(x:0,y:0), radius: 10, startAngle: 0, endAngle: CGFloat(Double.pi)*2-0.6, clockwise: true).cgPath
-        shaplayer.strokeColor = RGBColor(95, g: 164, b: 236).cgColor
+        shaplayer.strokeColor = RGBColor(r: 95, g: 164, b: 236).cgColor
         shaplayer.fillColor = UIColor.clear.cgColor
         shaplayer.lineWidth = 2
         shaplayer.position = center

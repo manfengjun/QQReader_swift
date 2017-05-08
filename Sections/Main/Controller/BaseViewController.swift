@@ -1,31 +1,34 @@
 //
-//  BaseNavController.swift
+//  BaseViewController.swift
 //  QQReader
 //
-//  Created by jun on 2017/5/5.
+//  Created by jun on 2017/5/8.
 //  Copyright © 2017年 JUN. All rights reserved.
 //
 
 import UIKit
 
-class BaseNavController: UINavigationController {
+class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    override var childViewControllerForStatusBarStyle: UIViewController?{
-        return self.topViewController
+    func dismissvc() {
+        if self.navigationController != nil {
+            self.navigationController?.popViewController(animated: true)
+        }
+        else
+        {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
-    override var childViewControllerForStatusBarHidden: UIViewController?{
-        return self.topViewController
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
     /*
     // MARK: - Navigation

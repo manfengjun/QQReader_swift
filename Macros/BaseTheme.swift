@@ -19,9 +19,9 @@ public let IS_IPHONE_6:Bool = ScreenHeight == 667
 public let IS_IPHONE_6P:Bool = ScreenHeight == 736
 
 public let MAINBGCOLOR = UIColor.white
-public let MAINBTCOLOR = RGBColor(66,g: 189,b: 86)
-public let MAINBARCOLOR = RGBColor(66,g: 189,b: 86)
-public let PLACEHOLDERCOLOR = RGBColor(161,g: 161,b: 161)
+public let MAINBTCOLOR = RGBColor(r: 66,g: 189,b: 86)
+public let MAINBARCOLOR = RGBColor(r: 66,g: 189,b: 86)
+public let PLACEHOLDERCOLOR = RGBColor(r: 161,g: 161,b: 161)
 
 public let TopSpacing:CGFloat = 40.0
 public let BottomSpacing:CGFloat = 40.0
@@ -33,16 +33,26 @@ class BaseTheme: NSObject {
     //单例
     static let sharedInstance = BaseTheme()
 }
-/**
- RGB颜色
- 
- - parameter r: r description
- - parameter g: g description
- - parameter b: b description
- 
- - returns: return value description
- */
-func RGBColor(_ r:Float,g:Float,b:Float) -> UIColor {
+
+/// RGB颜色
+///
+/// - Parameters:
+///   - r: r description
+///   - g: g description
+///   - b: b description
+/// - Returns: return value description
+func RGBColor(r:Float,g:Float,b:Float) -> UIColor {
     return UIColor(colorLiteralRed: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
 }
 
+/// RGB颜色(透明度)
+///
+/// - Parameters:
+///   - r: r description
+///   - g: g description
+///   - b: b description
+///   - a: a description
+/// - Returns: return value description
+func RGBColor(r:Float,g:Float,b:Float,a:Float) -> UIColor {
+    return UIColor(colorLiteralRed: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
+}

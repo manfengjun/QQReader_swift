@@ -18,13 +18,10 @@ extension NSObject
         path.addLine(to: end)
         path.close()
         let shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = RGBColor(238, g: 238, b: 238).cgColor
+        shapeLayer.strokeColor = RGBColor(r: 238, g: 238, b: 238).cgColor
         shapeLayer.lineWidth = 0.1
         shapeLayer.path = path.cgPath
         return shapeLayer
     }
 }
 
-class NSobjectExtension: NSObject {
-
-}
