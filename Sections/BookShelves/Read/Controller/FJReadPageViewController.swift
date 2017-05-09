@@ -21,6 +21,9 @@ class FJReadPageViewController: BaseViewController {
     
     lazy var bottomMenuView: FJBottomMenuView = {
         let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49))
+        bottomMenuView.completionSignal?.observeValues({ (text) in
+            print(text)
+        })
         return bottomMenuView
     }()
     
@@ -46,10 +49,12 @@ class FJReadPageViewController: BaseViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.subviews[0].alpha = 0
+        bottomMenuView.removeFromSuperview()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMenuView()
+        
         //添加阅读控制视图
         view.addSubview(pageController.view)
         addChildViewController(pageController)

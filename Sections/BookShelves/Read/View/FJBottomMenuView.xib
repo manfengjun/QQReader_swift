@@ -13,7 +13,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FJBottomMenuView" customModule="QQReader" customModuleProvider="target">
             <connections>
+                <outlet property="catalogTapGue" destination="dvb-m7-YrD" id="cAf-T7-1eD"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="RBx-pn-Hpy"/>
+                <outlet property="pregressTapGue" destination="Gqi-eq-oeM" id="Z2N-gn-WNC"/>
+                <outlet property="settingTapGue" destination="8GK-4R-YCH" id="sfR-Og-BPd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -42,12 +45,16 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="utr-2i-3RM" firstAttribute="centerX" secondItem="TRL-D6-5Oo" secondAttribute="centerX" id="933-qe-aAo"/>
                         <constraint firstAttribute="bottom" secondItem="utr-2i-3RM" secondAttribute="bottom" constant="5" id="DTH-pr-wJ8"/>
                         <constraint firstItem="x5E-cF-pFr" firstAttribute="centerX" secondItem="TRL-D6-5Oo" secondAttribute="centerX" id="QTz-xr-NDM"/>
                         <constraint firstItem="x5E-cF-pFr" firstAttribute="top" secondItem="TRL-D6-5Oo" secondAttribute="top" constant="5" id="pDM-Hu-Tuo"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="dvb-m7-YrD" appends="YES" id="Ifr-GW-Jcr"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7i-tc-aoS">
                     <rect key="frame" x="143.5" y="0.0" width="143" height="49"/>
@@ -70,12 +77,16 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="dNw-Xp-zUT" firstAttribute="centerX" secondItem="g7i-tc-aoS" secondAttribute="centerX" id="4wl-8V-HSk"/>
                         <constraint firstItem="FYJ-fT-7Zk" firstAttribute="top" secondItem="g7i-tc-aoS" secondAttribute="top" constant="5" id="DUI-2T-h54"/>
                         <constraint firstItem="FYJ-fT-7Zk" firstAttribute="centerX" secondItem="g7i-tc-aoS" secondAttribute="centerX" id="QoN-h3-FDP"/>
                         <constraint firstAttribute="bottom" secondItem="dNw-Xp-zUT" secondAttribute="bottom" constant="5" id="eyF-fW-8Fv"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Gqi-eq-oeM" appends="YES" id="vQV-9D-GKl"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vx7-zz-QGf">
                     <rect key="frame" x="286.5" y="0.0" width="143.5" height="49"/>
@@ -98,12 +109,16 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="VlI-9J-9oV" firstAttribute="centerX" secondItem="Vx7-zz-QGf" secondAttribute="centerX" id="HdV-XX-inf"/>
                         <constraint firstItem="0co-cL-flb" firstAttribute="centerX" secondItem="Vx7-zz-QGf" secondAttribute="centerX" id="Tbd-EJ-bN2"/>
                         <constraint firstItem="0co-cL-flb" firstAttribute="top" secondItem="Vx7-zz-QGf" secondAttribute="top" constant="5" id="cI2-06-17A"/>
                         <constraint firstAttribute="bottom" secondItem="VlI-9J-9oV" secondAttribute="bottom" constant="5" id="zgK-Vc-sw8"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="8GK-4R-YCH" appends="YES" id="deQ-7C-bXc"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59082833904109588" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,6 +140,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-12" y="193.5"/>
         </view>
+        <tapGestureRecognizer id="dvb-m7-YrD"/>
+        <tapGestureRecognizer id="Gqi-eq-oeM"/>
+        <tapGestureRecognizer id="8GK-4R-YCH"/>
     </objects>
     <resources>
         <image name="read_catalog" width="29" height="29"/>
