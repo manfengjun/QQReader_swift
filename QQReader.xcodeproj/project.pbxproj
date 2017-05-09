@@ -1032,10 +1032,25 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = QQReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"HMSegmentedControl\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYModel\"",
+					"$(inherited)",
+				);
+				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = JUN.QQReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AppDelegate/Bridging.h;
 				SWIFT_VERSION = 3.0;
+				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Debug;
 		};
@@ -1050,10 +1065,25 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = QQReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"HMSegmentedControl\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYModel\"",
+					"$(inherited)",
+				);
+				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = JUN.QQReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AppDelegate/Bridging.h;
 				SWIFT_VERSION = 3.0;
+				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Release;
 		};

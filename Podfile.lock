@@ -1,21 +1,24 @@
 PODS:
   - HMSegmentedControl (1.5.3)
   - MJRefresh (3.1.12)
+  - RxSwift (3.4.1)
   - YYCache (1.0.4)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - HMSegmentedControl (~> 1.5.3)
   - MJRefresh (~> 3.1.8)
+  - RxSwift (~> 3.4.1)
   - YYCache (~> 1.0.4)
   - YYModel (~> 1.0.4)
 
 SPEC CHECKSUMS:
   HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 06c238eca7ff5da4acfa83975859e4b8bd25d7f0
+PODFILE CHECKSUM: c1daccd42afdd4eb3c0abf4778a0f6742b8588dc
 
 COCOAPODS: 1.2.1
