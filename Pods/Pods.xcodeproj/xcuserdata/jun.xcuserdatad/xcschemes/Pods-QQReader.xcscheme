@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E799B1603161F09051B5F091388A73A8"
+               BlueprintIdentifier = "A5AA7A5BA7426FA209CE38C5D8CB21C2"
                BuildableName = "Pods_QQReader.framework"
                BlueprintName = "Pods-QQReader"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E799B1603161F09051B5F091388A73A8"
+            BlueprintIdentifier = "A5AA7A5BA7426FA209CE38C5D8CB21C2"
             BuildableName = "Pods_QQReader.framework"
             BlueprintName = "Pods-QQReader"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,32 +1,21 @@
 PODS:
-  - Alamofire (4.2.0)
+  - HMSegmentedControl (1.5.3)
   - MJRefresh (3.1.12)
-  - SDWebImage (4.0.0-beta2):
-    - SDWebImage/Core (= 4.0.0-beta2)
-  - SDWebImage/Core (4.0.0-beta2)
-  - SnapKit (3.0.2)
-  - SVProgressHUD (2.1.2)
   - YYCache (1.0.4)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.2.0)
-  - MJRefresh (~> 3.1.12)
-  - SDWebImage (~> 4.0.0-beta2)
-  - SnapKit (~> 3.0.2)
-  - SVProgressHUD (~> 2.1.2)
+  - HMSegmentedControl (~> 1.5.3)
+  - MJRefresh (~> 3.1.8)
   - YYCache (~> 1.0.4)
   - YYModel (~> 1.0.4)
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
-  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 621de557f03133a92c1b845280deb54a8d0d9575
+PODFILE CHECKSUM: 06c238eca7ff5da4acfa83975859e4b8bd25d7f0
 
 COCOAPODS: 1.2.1

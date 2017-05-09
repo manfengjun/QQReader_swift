@@ -58,6 +58,7 @@
 		BF4679221EC01C05001DD3FE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4679211EC01C05001DD3FE /* BaseViewController.swift */; };
 		BF4679241EC036E6001DD3FE /* FJBottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4679231EC036E6001DD3FE /* FJBottomMenuView.swift */; };
 		BF4679261EC036F6001DD3FE /* FJBottomMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4679251EC036F6001DD3FE /* FJBottomMenuView.xib */; };
+		BF5278381EC16565004F8954 /* FJCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5278371EC16565004F8954 /* FJCatalogViewController.swift */; };
 		BF6F982C1EBDD28E0060415F /* 测试.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98261EBDD28E0060415F /* 测试.txt */; };
 		BF6F982D1EBDD28E0060415F /* 武道宗师.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98271EBDD28E0060415F /* 武道宗师.txt */; };
 		BF6F982E1EBDD28E0060415F /* 细说明朝.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98281EBDD28E0060415F /* 细说明朝.txt */; };
@@ -159,6 +160,7 @@
 		BF4679211EC01C05001DD3FE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BF4679231EC036E6001DD3FE /* FJBottomMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJBottomMenuView.swift; sourceTree = "<group>"; };
 		BF4679251EC036F6001DD3FE /* FJBottomMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJBottomMenuView.xib; sourceTree = "<group>"; };
+		BF5278371EC16565004F8954 /* FJCatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJCatalogViewController.swift; sourceTree = "<group>"; };
 		BF6F98261EBDD28E0060415F /* 测试.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "测试.txt"; sourceTree = "<group>"; };
 		BF6F98271EBDD28E0060415F /* 武道宗师.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "武道宗师.txt"; sourceTree = "<group>"; };
 		BF6F98281EBDD28E0060415F /* 细说明朝.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细说明朝.txt"; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 			children = (
 				BF71B51B1EB9A478004D6774 /* FJReadPageViewController.swift */,
 				BF71B51C1EB9A478004D6774 /* FJReadViewController.swift */,
+				BF5278371EC16565004F8954 /* FJCatalogViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				BF0A8A6B1EBC653600BF17BF /* BaseConfig.swift in Sources */,
 				BF71B52F1EB9DA84004D6774 /* FJNoteModel.swift in Sources */,
 				BF71B5211EB9A478004D6774 /* FJReadViewController.swift in Sources */,
+				BF5278381EC16565004F8954 /* FJCatalogViewController.swift in Sources */,
 				5F1FF1C81DF7C43F00C77CDE /* ZJDrawerController.m in Sources */,
 				5F1FF1E61DF7C98B00C77CDE /* DiscoverViewController.swift in Sources */,
 				5F1FF1E01DF7C5FF00C77CDE /* BookShelvesViewController.swift in Sources */,

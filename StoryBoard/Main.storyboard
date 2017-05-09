@@ -203,6 +203,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <segue destination="Kyn-xw-Mdo" kind="show" id="eef-c3-AX1"/>
+                        <segue destination="bWj-m4-DA8" kind="show" identifier="catalogSegueID" id="jVZ-OL-q3E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xj3-qo-Se2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,6 +227,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqB-il-VAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2673" y="-1809"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dox-mx-kM8">
+            <objects>
+                <viewController id="bWj-m4-DA8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1fw-rr-q0d"/>
+                        <viewControllerLayoutGuide type="bottom" id="GxR-rR-FeU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="osf-j0-OxB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2S-gI-Xnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="-1115"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="HoO-Ck-hTY">

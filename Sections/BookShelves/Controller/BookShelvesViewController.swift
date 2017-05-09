@@ -46,7 +46,7 @@ class BookShelvesViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.booksArray.removeAllObjects()
 
-                self.getBooksUrl();
+                self.getBooksUrl()
                 //刷新
                 self.tableView.reloadData()
                 self.tableView.mj_header.endRefreshing()
@@ -67,7 +67,7 @@ class BookShelvesViewController: UIViewController {
                 if fb.hasSuffix(".txt") {
                     let index = fb.index(fb.endIndex, offsetBy: -4)
                     self.booksArray.add(fb.substring(to: index))
-                    print(fb);
+                    print(fb)
                 }
             }
 //        }
@@ -155,6 +155,6 @@ extension BookShelvesViewController:UITableViewDelegate,UITableViewDataSource,UI
         self.navigationController?.navigationBar.subviews[0].alpha = progress
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "readerSegueID", sender: indexPath);
+        self.performSegue(withIdentifier: "readerSegueID", sender: indexPath)
     }
 }

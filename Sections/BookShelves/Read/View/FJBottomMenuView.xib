@@ -37,7 +37,7 @@
                                 <constraint firstAttribute="height" constant="16" id="paI-uh-iJx"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -65,7 +65,7 @@
                                 <constraint firstAttribute="height" constant="16" id="0Ok-7u-91f"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -93,7 +93,7 @@
                                 <constraint firstAttribute="height" constant="16" id="D1f-qx-gUb"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -106,7 +106,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59082833904109588" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="g7i-tc-aoS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4wV-OV-a9a"/>
                 <constraint firstAttribute="bottom" secondItem="g7i-tc-aoS" secondAttribute="bottom" id="8vQ-tX-udT"/>

@@ -19,6 +19,11 @@ class FJReadPageViewController: BaseViewController {
     var readModel: FJReadModel?             //阅读对象
     var statusBarHidden = true             //是否显示状态栏
     
+    lazy var bottomMenuView: FJBottomMenuView = {
+        let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49))
+        return bottomMenuView
+    }()
+    
     ///翻页控制器
     lazy var pageController:UIPageViewController = {
         let pageController = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.pageCurl, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal, options: nil)
@@ -72,8 +77,8 @@ class FJReadPageViewController: BaseViewController {
     func setupMenuView() {
         setBackButtonInNav(imageUrl: "nav_back_white.png", action: #selector(FJReadPageViewController.dismissvc))
         setRightButtonInNav(imageUrl: "nav_more_white.png", action: #selector(FJReadPageViewController.dismissvc))
-        let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight - 49, width: ScreenWidth, height: 49))
         UIApplication.shared.keyWindow?.addSubview(bottomMenuView)
+        
     }
     // MARK: ------ 手势
     func showToolMenu() {
@@ -81,7 +86,11 @@ class FJReadPageViewController: BaseViewController {
         statusBarHidden = statusBarHidden ? false : true
         navigationController?.setNavigationBarHidden(statusBarHidden, animated: true)
         setNeedsStatusBarAppearanceUpdate()
-        
+        statusBarHidden ? (UIView.animate(withDuration: 0.15) {
+            self.bottomMenuView.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49)
+        }) : (UIView.animate(withDuration: 0.15) {
+            self.bottomMenuView.frame = CGRect(x: 0, y: ScreenHeight - 49, width: ScreenWidth, height: 49)
+        })
     }
 
     // MARK: ------ 设置是否显示状态栏

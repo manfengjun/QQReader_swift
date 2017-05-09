@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
+		<key>HMSegmentedControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -15,21 +15,6 @@
 			<false/>
 		</dict>
 		<key>Pods-QQReader.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SDWebImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SVProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>304BC01A9C0705DB5CBC5837DF260FDE</key>
+		<key>6BDD2E1916C1E8190F2BF9AC593772EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>46B69BF020AF50D74776A6BC87C38DB8</key>
+		<key>7891E2B724C54EF58FB1692B34F1455C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>A5AA7A5BA7426FA209CE38C5D8CB21C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0461F8768411372412AC90B15F0B092</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DEE1CD4E0313C9DA56F65622DE3FDF39</key>
+		<key>AE0DAA827FE6A41D9CE9A3DA864D9DC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E14A62900910444707A5504D25EC98DC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E1B466CAE2E8CBEF3C1EF873DA3D53C3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E799B1603161F09051B5F091388A73A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
