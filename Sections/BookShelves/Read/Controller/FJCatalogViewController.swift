@@ -8,7 +8,7 @@
 
 import UIKit
 import HMSegmentedControl
-class FJCatalogViewController: UIViewController {
+class FJCatalogViewController: UIViewController{
     lazy var segmentControl:HMSegmentedControl = {
         let segmentControl = HMSegmentedControl(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 40))
         segmentControl.sectionTitles = ["目录","书签","笔记"]
@@ -22,12 +22,36 @@ class FJCatalogViewController: UIViewController {
         segmentControl.selectionIndicatorHeight = 2
         return segmentControl
     }()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.subviews[0].alpha = 1
+        self.navigationController?.navigationBar.barTintColor = MAINBARCOLOR
+        self.view.backgroundColor = UIColor.orange
+        view.addSubview(segmentControl)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(segmentControl)
+        self.navigationController?.navigationBar.barTintColor = MAINBARCOLOR
+
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+//            //code
+////            self.navigationController?.setNavigationBarHidden(false, animated: false)
+////            
+////            self.navigationController?.navigationBar.subviews[0].alpha = 1
+////            self.navigationController?.navigationBar.barTintColor = UIColor.red
+////            self.view.backgroundColor = UIColor.orange
+//        }
+        //        view.addSubview(segmentControl)
         // Do any additional setup after loading the view.
     }
-
+//    // MARK: ------ 设置是否显示状态栏
+//    override var prefersStatusBarHidden: Bool{
+//        return false
+//    }
+//    override var preferredStatusBarStyle: UIStatusBarStyle{
+//        return UIStatusBarStyle.default
+//    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

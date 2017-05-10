@@ -20,7 +20,7 @@ public let IS_IPHONE_6P:Bool = ScreenHeight == 736
 
 public let MAINBGCOLOR = UIColor.white
 public let MAINBTCOLOR = RGBColor(r: 66,g: 189,b: 86)
-public let MAINBARCOLOR = RGBColor(r: 66,g: 189,b: 86)
+public let MAINBARCOLOR = RGBColor(r: 95,g: 164,b: 236)
 public let PLACEHOLDERCOLOR = RGBColor(r: 161,g: 161,b: 161)
 
 public let TopSpacing:CGFloat = 40.0

@@ -21,39 +21,36 @@ class FJReadPageViewController: BaseViewController {
     
     lazy var bottomMenuView: FJBottomMenuView = {
         let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49))
-        bottomMenuView.completionSignal?.observeValues({ (text) in
-            print(text)
-        })
+        
         return bottomMenuView
     }()
     
     ///翻页控制器
-    lazy var pageController:UIPageViewController = {
-        let pageController = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.pageCurl, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal, options: nil)
+    lazy var pageController:BasePageViewController = {
+        let pageController = BasePageViewController(transitionStyle: UIPageViewControllerTransitionStyle.pageCurl, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal, options: nil)
         pageController.delegate = self
         pageController.dataSource = self
         return pageController
     }()
+    
     lazy var tapGesture:UITapGestureRecognizer = {
         let tap = UITapGestureRecognizer(target: self, action: #selector(FJReadPageViewController.showToolMenu))
         return tap
     }()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupMenuView()
         navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.navigationBar.barTintColor = RGBColor(r: 0, g: 0, b: 0, a: 0.3)
 
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        navigationController?.navigationBar.barTintColor = UIColor.white
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationController?.navigationBar.subviews[0].alpha = 0
         bottomMenuView.removeFromSuperview()
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMenuView()
         
         //添加阅读控制视图
         view.addSubview(pageController.view)
@@ -95,6 +92,10 @@ class FJReadPageViewController: BaseViewController {
             self.bottomMenuView.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49)
         }) : (UIView.animate(withDuration: 0.15) {
             self.bottomMenuView.frame = CGRect(x: 0, y: ScreenHeight - 49, width: ScreenWidth, height: 49)
+        })
+
+        bottomMenuView.completionSignal?.observeValues({ (text) in
+            self.performSegue(withIdentifier: "catalogSegueID", sender: "")
         })
     }
 

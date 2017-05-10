@@ -59,6 +59,7 @@
 		BF4679241EC036E6001DD3FE /* FJBottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4679231EC036E6001DD3FE /* FJBottomMenuView.swift */; };
 		BF4679261EC036F6001DD3FE /* FJBottomMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4679251EC036F6001DD3FE /* FJBottomMenuView.xib */; };
 		BF5278381EC16565004F8954 /* FJCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5278371EC16565004F8954 /* FJCatalogViewController.swift */; };
+		BF54F78D1EC2BF4900B0384C /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F78C1EC2BF4900B0384C /* BasePageViewController.swift */; };
 		BF6F982C1EBDD28E0060415F /* 测试.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98261EBDD28E0060415F /* 测试.txt */; };
 		BF6F982D1EBDD28E0060415F /* 武道宗师.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98271EBDD28E0060415F /* 武道宗师.txt */; };
 		BF6F982E1EBDD28E0060415F /* 细说明朝.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98281EBDD28E0060415F /* 细说明朝.txt */; };
@@ -161,6 +162,7 @@
 		BF4679231EC036E6001DD3FE /* FJBottomMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJBottomMenuView.swift; sourceTree = "<group>"; };
 		BF4679251EC036F6001DD3FE /* FJBottomMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJBottomMenuView.xib; sourceTree = "<group>"; };
 		BF5278371EC16565004F8954 /* FJCatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJCatalogViewController.swift; sourceTree = "<group>"; };
+		BF54F78C1EC2BF4900B0384C /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		BF6F98261EBDD28E0060415F /* 测试.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "测试.txt"; sourceTree = "<group>"; };
 		BF6F98271EBDD28E0060415F /* 武道宗师.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "武道宗师.txt"; sourceTree = "<group>"; };
 		BF6F98281EBDD28E0060415F /* 细说明朝.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细说明朝.txt"; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				5F1FF1EF1DF7CE0000C77CDE /* MainTabBarController.swift */,
 				BF0A8A681EBC5AA500BF17BF /* BaseNavController.swift */,
 				BF4679211EC01C05001DD3FE /* BaseViewController.swift */,
+				BF54F78C1EC2BF4900B0384C /* BasePageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -860,6 +863,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF54F78D1EC2BF4900B0384C /* BasePageViewController.swift in Sources */,
 				5F1FF1C71DF7C43F00C77CDE /* LFJLoadingView.m in Sources */,
 				BF71B5201EB9A478004D6774 /* FJReadPageViewController.swift in Sources */,
 				5F4AE51B1DF80D1E00BF557F /* BookShelvesTVCell.swift in Sources */,

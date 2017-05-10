@@ -1,24 +1,30 @@
 //
-//  SelectionViewController.swift
+//  BasePageViewController.swift
 //  QQReader
 //
-//  Created by huwei on 2016/12/7.
-//  Copyright © 2016年 JUN. All rights reserved.
+//  Created by jun on 2017/5/10.
+//  Copyright © 2017年 JUN. All rights reserved.
 //
 
 import UIKit
 
-class SelectionViewController: UIViewController {
-
+class BasePageViewController: UIPageViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.parent?.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.parent?.navigationController?.navigationBar.barTintColor = MAINBARCOLOR
+        self.parent?.navigationController?.navigationBar.subviews[0].alpha = 1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func push(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "selectSegueID", sender: "")
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

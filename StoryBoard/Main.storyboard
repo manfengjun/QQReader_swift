@@ -22,9 +22,22 @@
                     <view key="view" contentMode="scaleToFill" id="fcC-Yi-4ji">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpr-EU-bGo">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fpr-EU-bGo" firstAttribute="centerX" secondItem="fcC-Yi-4ji" secondAttribute="centerX" id="cr7-MO-PFo"/>
+                            <constraint firstItem="fpr-EU-bGo" firstAttribute="centerY" secondItem="fcC-Yi-4ji" secondAttribute="centerY" id="lKl-xR-KSu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cmf-EE-etz"/>
+                    <connections>
+                        <segue destination="bcd-Rh-76Y" kind="show" identifier="selectSegueID" id="3bB-se-WfE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0l-XO-eUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,10 +213,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <segue destination="Kyn-xw-Mdo" kind="show" id="eef-c3-AX1"/>
-                        <segue destination="bWj-m4-DA8" kind="show" identifier="catalogSegueID" id="jVZ-OL-q3E"/>
+                        <segue destination="bcd-Rh-76Y" kind="show" identifier="catalogSegueID" id="h4I-zM-xUH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xj3-qo-Se2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,23 +240,23 @@
             </objects>
             <point key="canvasLocation" x="2673" y="-1809"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Dox-mx-kM8">
+        <!--Catalog View Controller-->
+        <scene sceneID="fhb-FN-scQ">
             <objects>
-                <viewController id="bWj-m4-DA8" sceneMemberID="viewController">
+                <viewController id="bcd-Rh-76Y" customClass="FJCatalogViewController" customModule="QQReader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1fw-rr-q0d"/>
-                        <viewControllerLayoutGuide type="bottom" id="GxR-rR-FeU"/>
+                        <viewControllerLayoutGuide type="top" id="bhi-CJ-ji7"/>
+                        <viewControllerLayoutGuide type="bottom" id="9R6-kP-sQ7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="osf-j0-OxB">
+                    <view key="view" contentMode="scaleToFill" id="OgN-RX-uZf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y2S-gI-Xnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oj9-26-Cuh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="-1115"/>
+            <point key="canvasLocation" x="2014" y="-946"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="HoO-Ck-hTY">
@@ -634,4 +646,7 @@
         <image name="tabbar_book_stack" width="24" height="24"/>
         <image name="tabbar_book_stack_hl" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3bB-se-WfE"/>
+    </inferredMetricsTieBreakers>
 </document>

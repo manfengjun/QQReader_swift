@@ -96,7 +96,7 @@ class BookShelvesViewController: UIViewController {
         createNavItem()
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.barTintColor = UIColor.orange
+        self.navigationController?.navigationBar.barTintColor = MAINBARCOLOR
         self.navigationController?.navigationBar.subviews[0].alpha = 0
     }
     override var prefersStatusBarHidden: Bool{
