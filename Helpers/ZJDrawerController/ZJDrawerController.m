@@ -99,6 +99,7 @@ typedef NS_ENUM(NSInteger, ZJDrawerControllerType) {
     
     [self.view addSubview:self.drawerContentView];
     [self.view addSubview:self.centerContentView];
+    self.centerContentView.backgroundColor = [UIColor whiteColor];
     // 添加手势到centerContentView上面, 因为我们希望只有内容的vie上面能够响应手势
     // 手势的初始化我们使用了懒加载
 //    [self.centerContentView addGestureRecognizer:self.panGesture];

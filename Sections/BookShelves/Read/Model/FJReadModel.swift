@@ -11,6 +11,8 @@ import UIKit
 class FJReadModel: NSObject,NSCoding {
     //地址
     var resource: String?
+    //小说名字
+    var title: String?
     //小说内容
     var content: String?
 //    //
@@ -102,6 +104,7 @@ class FJReadModel: NSObject,NSCoding {
     class func getLocalModel(url: String) -> FJReadModel{
         let key = NSString(string: url).lastPathComponent
         let data = UserDefaults.standard.object(forKey: key)
+        let title = NSString(string: key)
         if data == nil{
             if key.hasSuffix("txt"){
                 let model = FJReadModel(content: FJReadUtilites.encode(url: url))
@@ -125,6 +128,7 @@ class FJReadModel: NSObject,NSCoding {
             FJReadModel.updateLocalModel(readModel: model, url: url)
             return model
         }
+        model.title = title.substring(to: title.length - 4)
         return model
     }
     

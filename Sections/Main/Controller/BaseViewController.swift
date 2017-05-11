@@ -9,18 +9,16 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
+    var dismissFunc:(()->())?
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     func dismissvc() {
         if self.navigationController != nil {
             self.navigationController?.popViewController(animated: true)
         }
-        else
-        {
+        else{
             self.dismiss(animated: true, completion: nil)
         }
     }

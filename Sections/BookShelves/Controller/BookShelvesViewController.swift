@@ -12,7 +12,6 @@ class BookShelvesViewController: UIViewController {
 
     @IBOutlet var headView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var textfields: UITextField!
     var last:CGFloat?
     ///本地书籍
     lazy var booksArray:NSMutableArray = {

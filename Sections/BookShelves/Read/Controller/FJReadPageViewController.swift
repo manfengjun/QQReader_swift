@@ -21,7 +21,22 @@ class FJReadPageViewController: BaseViewController {
     
     lazy var bottomMenuView: FJBottomMenuView = {
         let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49))
-        
+        bottomMenuView.completionSignal?.observeValues({ (text) in
+            switch text {
+            case 1:
+                self.performSegue(withIdentifier: "catalogSegueID", sender: "")
+                break
+            case 2:
+                self.performSegue(withIdentifier: "catalogSegueID", sender: "")
+                break
+            case 3:
+                self.performSegue(withIdentifier: "catalogSegueID", sender: "")
+                break
+            default:
+                break
+                
+            }
+        })
         return bottomMenuView
     }()
     
@@ -40,14 +55,12 @@ class FJReadPageViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupMenuView()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        navigationController?.navigationBar.barTintColor = RGBColor(r: 0, g: 0, b: 0, a: 0.3)
+        navigationController?.setNavigationBarHidden(statusBarHidden, animated: true)
+        navigationController?.navigationBar.barTintColor = MAINBARCOLOR
 
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        bottomMenuView.removeFromSuperview()
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,15 +84,13 @@ class FJReadPageViewController: BaseViewController {
         super.viewDidLayoutSubviews()
         pageController.view.frame = self.view.frame
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     // MARK: ------ 功能菜单
     func setupMenuView() {
+        title = readModel?.title
         setBackButtonInNav(imageUrl: "nav_back_white.png", action: #selector(FJReadPageViewController.dismissvc))
         setRightButtonInNav(imageUrl: "nav_more_white.png", action: #selector(FJReadPageViewController.dismissvc))
-        UIApplication.shared.keyWindow?.addSubview(bottomMenuView)
+        view.addSubview(bottomMenuView)
+        view.bringSubview(toFront: bottomMenuView)
         
     }
     // MARK: ------ 手势
@@ -93,18 +104,30 @@ class FJReadPageViewController: BaseViewController {
         }) : (UIView.animate(withDuration: 0.15) {
             self.bottomMenuView.frame = CGRect(x: 0, y: ScreenHeight - 49, width: ScreenWidth, height: 49)
         })
-
-        bottomMenuView.completionSignal?.observeValues({ (text) in
-            self.performSegue(withIdentifier: "catalogSegueID", sender: "")
-        })
+        pageController.view.isUserInteractionEnabled = statusBarHidden
     }
-
+    
     // MARK: ------ 设置是否显示状态栏
     override var prefersStatusBarHidden: Bool{
         return statusBarHidden
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return UIStatusBarStyle.default
+    }
+    // MARK: ------ 跳转参数传递
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "catalogSegueID"{
+            let catalogVC = segue.destination as! FJCatalogMenuController
+            catalogVC.title = readModel?.title
+            catalogVC.chapterModels = (readModel?.fjChapterModels)!
+            catalogVC.dismissFunc = {
+                self.navigationController?.setNavigationBarHidden(self.statusBarHidden, animated: true)
+            }
+        }
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 extension FJReadPageViewController: UIPageViewControllerDelegate,UIPageViewControllerDataSource{
