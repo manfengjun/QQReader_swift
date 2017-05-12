@@ -120,6 +120,7 @@ class BookShelvesViewController: UIViewController {
             let fileUrl = Bundle.main.path(forResource: self.booksArray[indexPath.row] as? String, ofType: "txt")
             if let url = fileUrl {
                 readVC?.readModel = FJReadModel.getLocalModel(url: url)
+                SingleHandle.shareInstance.readModel = readVC?.readModel
                 readVC?.resourceURL = url
             }
         }

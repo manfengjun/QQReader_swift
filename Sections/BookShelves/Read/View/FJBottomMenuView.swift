@@ -37,9 +37,6 @@ class FJBottomMenuView: UIView {
         completionSignal = Signal.merge([catalogSignal,progressSignal,settingSignal])
         
     }
-    @IBAction func ceshi(_ sender: UITapGestureRecognizer) {
-        print("sdfsdfsdf")
-    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

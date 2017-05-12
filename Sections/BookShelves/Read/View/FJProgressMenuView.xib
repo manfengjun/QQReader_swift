@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FJProgressMenuView" customModule="QQReader" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="YKc-m0-4UW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="49"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRs-Rl-YZe">
+                    <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="HRs-Rl-YZe" secondAttribute="height" multiplier="1:1" id="JJr-Om-dds"/>
+                    </constraints>
+                    <state key="normal" title="－">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-oh-Wnd">
+                    <rect key="frame" x="342" y="0.0" width="49" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="3cb-oh-Wnd" secondAttribute="height" multiplier="1:1" id="PuN-oH-rfA"/>
+                    </constraints>
+                    <state key="normal" title="＋">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" trackImage="icon_small_mask.png" translatesAutoresizingMaskIntoConstraints="NO" id="F5p-4Y-dk4">
+                    <rect key="frame" x="49" y="23.5" width="293" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="7Ys-e0-3lM"/>
+                    </constraints>
+                    <color key="progressTintColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" red="0.37254901959999998" green="0.64313725489999995" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="F5p-4Y-dk4" secondAttribute="trailing" constant="49" id="1bO-i2-bbg"/>
+                <constraint firstAttribute="bottom" secondItem="3cb-oh-Wnd" secondAttribute="bottom" id="5g2-OD-ikT"/>
+                <constraint firstItem="F5p-4Y-dk4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="B44-6R-8bV"/>
+                <constraint firstItem="F5p-4Y-dk4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="49" id="KNR-Mj-Xe5"/>
+                <constraint firstAttribute="bottom" secondItem="HRs-Rl-YZe" secondAttribute="bottom" id="LiE-C5-RIX"/>
+                <constraint firstItem="3cb-oh-Wnd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Mog-8A-KdU"/>
+                <constraint firstItem="HRs-Rl-YZe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZhM-tq-i22"/>
+                <constraint firstItem="HRs-Rl-YZe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aPh-e2-CKK"/>
+                <constraint firstAttribute="trailing" secondItem="3cb-oh-Wnd" secondAttribute="trailing" id="qVK-q3-Sfs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="364"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_small_mask.png" width="72" height="72"/>
+    </resources>
+</document>

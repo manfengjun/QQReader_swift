@@ -54,6 +54,9 @@
 		BF0AE7951EB8856600A07D58 /* book_default_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE7941EB8856600A07D58 /* book_default_cover.png */; };
 		BF0AE7991EB88B4B00A07D58 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0AE7981EB88B4B00A07D58 /* libxml2.2.tbd */; };
 		BF0AE79B1EB88BD600A07D58 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0AE79A1EB88BD600A07D58 /* libz.tbd */; };
+		BF22EB011EC5ABED003BA294 /* SingleHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22EB001EC5ABED003BA294 /* SingleHandle.swift */; };
+		BF22EB051EC5B77F003BA294 /* FJProgressMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF22EB041EC5B77F003BA294 /* FJProgressMenuView.xib */; };
+		BF22EB071EC5BAF5003BA294 /* FJProgressMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22EB061EC5BAF5003BA294 /* FJProgressMenuView.swift */; };
 		BF4679201EC01861001DD3FE /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46791F1EC01861001DD3FE /* UIViewControllerExtensions.swift */; };
 		BF4679221EC01C05001DD3FE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4679211EC01C05001DD3FE /* BaseViewController.swift */; };
 		BF4679241EC036E6001DD3FE /* FJBottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4679231EC036E6001DD3FE /* FJBottomMenuView.swift */; };
@@ -161,6 +164,9 @@
 		BF0AE7961EB88B3A00A07D58 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		BF0AE7981EB88B4B00A07D58 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		BF0AE79A1EB88BD600A07D58 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BF22EB001EC5ABED003BA294 /* SingleHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleHandle.swift; sourceTree = "<group>"; };
+		BF22EB041EC5B77F003BA294 /* FJProgressMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJProgressMenuView.xib; sourceTree = "<group>"; };
+		BF22EB061EC5BAF5003BA294 /* FJProgressMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJProgressMenuView.swift; sourceTree = "<group>"; };
 		BF46791F1EC01861001DD3FE /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BF4679211EC01C05001DD3FE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BF4679231EC036E6001DD3FE /* FJBottomMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJBottomMenuView.swift; sourceTree = "<group>"; };
@@ -632,9 +638,11 @@
 			children = (
 				BF71B5231EB9A499004D6774 /* FJReadView.swift */,
 				BF71B5251EB9B096004D6774 /* FJMagnifierView.swift */,
-				BF4679231EC036E6001DD3FE /* FJBottomMenuView.swift */,
 				BFD22ED71EC46DF2004FB47D /* FJCatalogListTVCell.swift */,
+				BF4679231EC036E6001DD3FE /* FJBottomMenuView.swift */,
 				BF4679251EC036F6001DD3FE /* FJBottomMenuView.xib */,
+				BF22EB061EC5BAF5003BA294 /* FJProgressMenuView.swift */,
+				BF22EB041EC5B77F003BA294 /* FJProgressMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -645,6 +653,7 @@
 				BF71B5281EB9C06D004D6774 /* FJReaderParser.swift */,
 				BF71B52A1EB9C457004D6774 /* FJReadConfig.swift */,
 				BF71B5371EB9E874004D6774 /* FJReadUtilites.swift */,
+				BF22EB001EC5ABED003BA294 /* SingleHandle.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -775,6 +784,7 @@
 				BF4679261EC036F6001DD3FE /* FJBottomMenuView.xib in Resources */,
 				5F1FF2041DF7ED2200C77CDE /* left_lishi.png in Resources */,
 				5F4AE51D1DF80E1700BF557F /* 150.jpeg in Resources */,
+				BF22EB051EC5B77F003BA294 /* FJProgressMenuView.xib in Resources */,
 				BF0AE7601EB8852C00A07D58 /* bg_back_white@2x.png in Resources */,
 				BF6F982D1EBDD28E0060415F /* 武道宗师.txt in Resources */,
 				5F4AE5191DF8087E00BF557F /* notification_icon_newbie_present@2x.png in Resources */,
@@ -898,6 +908,8 @@
 				5F1FF1FB1DF7E42500C77CDE /* LeftTVCell.swift in Sources */,
 				BF0AE6AD1EB8505100A07D58 /* AppDelegate.swift in Sources */,
 				BF0A8A691EBC5AA500BF17BF /* BaseNavController.swift in Sources */,
+				BF22EB011EC5ABED003BA294 /* SingleHandle.swift in Sources */,
+				BF22EB071EC5BAF5003BA294 /* FJProgressMenuView.swift in Sources */,
 				5F1FF1EE1DF7CDE400C77CDE /* LeftViewController.swift in Sources */,
 				5F1FF1C61DF7C43F00C77CDE /* LFJCircleProgressView.m in Sources */,
 				5F1FF1E41DF7C61E00C77CDE /* StackViewController.swift in Sources */,

@@ -18,7 +18,7 @@ class FJReadPageViewController: BaseViewController {
     var readVC: FJReadViewController?       //当前阅读视图
     var readModel: FJReadModel?             //阅读对象
     var statusBarHidden = true             //是否显示状态栏
-    
+    /// 底部菜单
     lazy var bottomMenuView: FJBottomMenuView = {
         let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49))
         bottomMenuView.completionSignal?.observeValues({ (text) in
@@ -27,7 +27,13 @@ class FJReadPageViewController: BaseViewController {
                 self.performSegue(withIdentifier: "catalogSegueID", sender: "")
                 break
             case 2:
-                self.performSegue(withIdentifier: "catalogSegueID", sender: "")
+                self.view.addSubview(self.progressMenuView)
+                self.statusBarHidden = false
+                self.showToolMenu()
+                UIView.animate(withDuration: 0.1) {
+                    self.view.bringSubview(toFront: self.progressMenuView)
+                    self.progressMenuView.frame = CGRect(x: 0, y: ScreenHeight - 49, width: ScreenWidth, height: 49)
+                }
                 break
             case 3:
                 self.performSegue(withIdentifier: "catalogSegueID", sender: "")
@@ -39,8 +45,12 @@ class FJReadPageViewController: BaseViewController {
         })
         return bottomMenuView
     }()
-    
-    ///翻页控制器
+    /// 进度调节面板
+    lazy var progressMenuView: FJProgressMenuView = {
+        let progressMenuView = FJProgressMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49))
+        return progressMenuView
+    }()
+    /// 翻页控制器
     lazy var pageController:BasePageViewController = {
         let pageController = BasePageViewController(transitionStyle: UIPageViewControllerTransitionStyle.pageCurl, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal, options: nil)
         pageController.delegate = self
@@ -58,21 +68,22 @@ class FJReadPageViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(statusBarHidden, animated: true)
         navigationController?.navigationBar.barTintColor = MAINBARCOLOR
 
+        
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //监听
+        NotificationCenter.default.addObserver(self, selector: #selector(catalogChange(notification:)), name: NSNotification.Name(rawValue: "SelectCatalog"), object: nil)
         //添加阅读控制视图
         view.addSubview(pageController.view)
         addChildViewController(pageController)
-//        navigationController?.barHideOnTapGestureRecognizer.addTarget(self, action: #selector(FJReadPageViewController.showToolMenu))
         view.addGestureRecognizer(tapGesture)
 
         //设置第一页
-        pageController.setViewControllers([self.readVC(chapter: (readModel?.record?.chapter)!, page: (readModel?.record?.chapter)!)], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
+        pageController.setViewControllers([self.readVC(chapter: (readModel?.record?.chapter)!, page: (readModel?.record?.page)!)], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
         //初始化属性
         chapter = readModel?.record?.chapter
         page = readModel?.record?.page
@@ -83,6 +94,13 @@ class FJReadPageViewController: BaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         pageController.view.frame = self.view.frame
+    }
+    // MARK: ------ 接受目录跳转通知
+    func catalogChange(notification:NSNotification) {
+        let chapter = notification.userInfo?["chapter"] as! Int
+        let page = notification.userInfo?["page"] as! Int
+        pageController.setViewControllers([self.readVC(chapter: chapter, page: page)], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
+        updateReadModel(chapter: chapter, page: page)
     }
     // MARK: ------ 功能菜单
     func setupMenuView() {
@@ -119,9 +137,9 @@ class FJReadPageViewController: BaseViewController {
         if segue.identifier ==  "catalogSegueID"{
             let catalogVC = segue.destination as! FJCatalogMenuController
             catalogVC.title = readModel?.title
-            catalogVC.chapterModels = (readModel?.fjChapterModels)!
             catalogVC.dismissFunc = {
-                self.navigationController?.setNavigationBarHidden(self.statusBarHidden, animated: true)
+                self.statusBarHidden = false
+                self.showToolMenu()
             }
         }
     }
@@ -203,6 +221,7 @@ extension FJReadPageViewController: UIPageViewControllerDelegate,UIPageViewContr
         readModel?.record?.chapter = chapter
         readModel?.record?.page = page
         readModel?.font = FJReadConfig.shareInstance.fontSize
+        SingleHandle.shareInstance.readModel = readModel
         FJReadModel.updateLocalModel(readModel: readModel!, url: resourceURL!)
     }
 }

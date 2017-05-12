@@ -8,13 +8,12 @@
 
 import UIKit
 import HMSegmentedControl
+import ReactiveCocoa
+import ReactiveSwift
+import Result
 class FJCatalogMenuController: BaseViewController{
     @IBOutlet weak var segmentControl: HMSegmentedControl!
     @IBOutlet weak var scrollContentView: UIView!
-    lazy var chapterModels:NSMutableArray = {
-        let chapterModels = NSMutableArray()
-        return chapterModels
-    }()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -22,6 +21,7 @@ class FJCatalogMenuController: BaseViewController{
         super.viewDidLoad()
         settingSegment()
         setupChildControllers()
+        self.automaticallyAdjustsScrollViewInsets = false
         setBackButtonInNav(imageUrl: "nav_back_white.png", action: #selector(FJReadPageViewController.dismissvc))
     }
     func settingSegment() {
@@ -41,8 +41,7 @@ class FJCatalogMenuController: BaseViewController{
     func setupChildControllers() {
         let stotyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let catalogListVC = stotyboard.instantiateViewController(withIdentifier: "FJCatalogListVC") as! FJCatalogListViewController
-        catalogListVC.chapterModels = chapterModels
-        catalogListVC.view.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - 104 - 64)
+        catalogListVC.view.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - 104)
         self.scrollContentView.addSubview(catalogListVC.view)
         self.addChildViewController(catalogListVC)
     }
