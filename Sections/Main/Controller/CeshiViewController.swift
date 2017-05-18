@@ -1,36 +1,26 @@
 //
-//  MainTabBarController.swift
+//  CeshiViewController.swift
 //  QQReader
 //
-//  Created by huwei on 2016/12/7.
-//  Copyright © 2016年 JUN. All rights reserved.
+//  Created by jun on 2017/5/16.
+//  Copyright © 2017年 JUN. All rights reserved.
 //
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class CeshiViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.selectedIndex = 0
-        self.view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.orange
         // Do any additional setup after loading the view.
     }
-    
-    override var childViewControllerForStatusBarStyle: UIViewController?{
-        return self.selectedViewController
-    }
-    
-    override var childViewControllerForStatusBarHidden: UIViewController?{
-        return self.selectedViewController
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -40,5 +30,4 @@ class MainTabBarController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

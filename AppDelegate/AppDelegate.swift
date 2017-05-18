@@ -19,11 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         self.window?.backgroundColor = UIColor.white
         
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let leftVC = storyboard.instantiateViewController(withIdentifier: "leftVC")
-        let mainTabbar = storyboard.instantiateViewController(withIdentifier: "mainTabbar")
-        zjdrawerVC = ZJDrawerController(leftController: leftVC, center: mainTabbar)
-        self.window?.rootViewController = zjdrawerVC
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let leftVC = storyboard.instantiateViewController(withIdentifier: "leftVC")
+//        let mainTabbar = storyboard.instantiateViewController(withIdentifier: "mainTabbar")
+//        zjdrawerVC = ZJDrawerController(leftController: leftVC, center: mainTabbar)
+//        self.window?.rootViewController = zjdrawerVC
+        
+        let rootVC = CeshiViewController()
+        self.window?.rootViewController = rootVC
         return true
     }
     

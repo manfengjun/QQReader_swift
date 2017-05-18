@@ -39,6 +39,7 @@
 		5F4E26681DFE98F30083B413 /* feedflow_refresh_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E26671DFE98F30083B413 /* feedflow_refresh_bg@3x.png */; };
 		5F945B881DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */; };
 		949E1860568574CB825F89F9 /* Pods_QQReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970876D4178D94DF41DB6784 /* Pods_QQReader.framework */; };
+		BF0215571ECA99F800252C54 /* CeshiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0215561ECA99F800252C54 /* CeshiViewController.swift */; };
 		BF0A8A691EBC5AA500BF17BF /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A8A681EBC5AA500BF17BF /* BaseNavController.swift */; };
 		BF0A8A6B1EBC653600BF17BF /* BaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A8A6A1EBC653600BF17BF /* BaseConfig.swift */; };
 		BF0AE6AD1EB8505100A07D58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0AE6AC1EB8505100A07D58 /* AppDelegate.swift */; };
@@ -148,6 +149,7 @@
 		5F945B871DFE418B00ACA1E1 /* MJRefreshDiyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJRefreshDiyHeader.swift; sourceTree = "<group>"; };
 		970876D4178D94DF41DB6784 /* Pods_QQReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6B5DFB7903201DE062A10B /* Pods-QQReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQReader/Pods-QQReader.debug.xcconfig"; sourceTree = "<group>"; };
+		BF0215561ECA99F800252C54 /* CeshiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeshiViewController.swift; sourceTree = "<group>"; };
 		BF0A8A681EBC5AA500BF17BF /* BaseNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
 		BF0A8A6A1EBC653600BF17BF /* BaseConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConfig.swift; sourceTree = "<group>"; };
 		BF0AE6AC1EB8505100A07D58 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				BF0A8A681EBC5AA500BF17BF /* BaseNavController.swift */,
 				BF4679211EC01C05001DD3FE /* BaseViewController.swift */,
 				BF54F78C1EC2BF4900B0384C /* BasePageViewController.swift */,
+				BF0215561ECA99F800252C54 /* CeshiViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				BF54F78D1EC2BF4900B0384C /* BasePageViewController.swift in Sources */,
 				5F1FF1C71DF7C43F00C77CDE /* LFJLoadingView.m in Sources */,
 				BF71B5201EB9A478004D6774 /* FJReadPageViewController.swift in Sources */,
+				BF0215571ECA99F800252C54 /* CeshiViewController.swift in Sources */,
 				5F4AE51B1DF80D1E00BF557F /* BookShelvesTVCell.swift in Sources */,
 				BF71B5221EB9A478004D6774 /* FJReadModel.swift in Sources */,
 				BF4679221EC01C05001DD3FE /* BaseViewController.swift in Sources */,

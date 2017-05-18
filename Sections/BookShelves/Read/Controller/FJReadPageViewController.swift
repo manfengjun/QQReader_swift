@@ -17,22 +17,23 @@ class FJReadPageViewController: BaseViewController {
     var resourceURL: String?
     var readVC: FJReadViewController?       //当前阅读视图
     var readModel: FJReadModel?             //阅读对象
-    var statusBarHidden = true             //是否显示状态栏
+    var statusBarHidden = true              //是否显示状态栏
+    var tabbarType = 1                      //菜单类型（目录菜单1 进度2 设置3）
     /// 底部菜单
     lazy var bottomMenuView: FJBottomMenuView = {
-        let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49))
+        let bottomMenuView = FJBottomMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: ScreenHeight))
         bottomMenuView.completionSignal?.observeValues({ (text) in
             switch text {
             case 1:
                 self.performSegue(withIdentifier: "catalogSegueID", sender: "")
                 break
             case 2:
-                self.view.addSubview(self.progressMenuView)
+                UIApplication.shared.keyWindow?.addSubview(self.progressMenuView)
                 self.statusBarHidden = false
                 self.showToolMenu()
                 UIView.animate(withDuration: 0.1) {
-                    self.view.bringSubview(toFront: self.progressMenuView)
-                    self.progressMenuView.frame = CGRect(x: 0, y: ScreenHeight - 49, width: ScreenWidth, height: 49)
+                    UIApplication.shared.keyWindow?.bringSubview(toFront: self.progressMenuView)
+                    self.progressMenuView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight)
                 }
                 break
             case 3:
@@ -48,6 +49,24 @@ class FJReadPageViewController: BaseViewController {
     /// 进度调节面板
     lazy var progressMenuView: FJProgressMenuView = {
         let progressMenuView = FJProgressMenuView(frame: CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: 49))
+        progressMenuView.completionSignal?.observeValues({ (text) in
+            switch text {
+            case 1:
+                UIView.animate(withDuration: 0.1) {
+                    UIApplication.shared.keyWindow?.bringSubview(toFront: self.progressMenuView)
+                    self.progressMenuView.frame = CGRect(x: 0, y: ScreenHeight, width: ScreenWidth, height: ScreenHeight)
+                }
+                break
+            case 2:
+                break
+            case 3:
+                break
+            default:
+                break
+                
+            }
+
+        })
         return progressMenuView
     }()
     /// 翻页控制器
@@ -109,7 +128,6 @@ class FJReadPageViewController: BaseViewController {
         setRightButtonInNav(imageUrl: "nav_more_white.png", action: #selector(FJReadPageViewController.dismissvc))
         view.addSubview(bottomMenuView)
         view.bringSubview(toFront: bottomMenuView)
-        
     }
     // MARK: ------ 手势
     func showToolMenu() {

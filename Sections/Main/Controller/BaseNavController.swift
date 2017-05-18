@@ -15,9 +15,11 @@ class BaseNavController: UINavigationController {
         navigationBar.titleTextAttributes = [NSFontAttributeName:UIFont.systemFont(ofSize: 17), NSForegroundColorAttributeName:UIColor.white]
         // Do any additional setup after loading the view.
     }
+    
     override var childViewControllerForStatusBarStyle: UIViewController?{
         return self.topViewController
     }
+    
     override var childViewControllerForStatusBarHidden: UIViewController?{
         return self.topViewController
     }
