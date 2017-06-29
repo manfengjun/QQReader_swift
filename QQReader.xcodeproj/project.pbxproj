@@ -64,6 +64,7 @@
 		BF4679261EC036F6001DD3FE /* FJBottomMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4679251EC036F6001DD3FE /* FJBottomMenuView.xib */; };
 		BF5278381EC16565004F8954 /* FJCatalogMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5278371EC16565004F8954 /* FJCatalogMenuController.swift */; };
 		BF54F78D1EC2BF4900B0384C /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F78C1EC2BF4900B0384C /* BasePageViewController.swift */; };
+		BF5612611ED7FB8600C17C49 /* 游戏民国.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF5612601ED7FB8600C17C49 /* 游戏民国.txt */; };
 		BF6F982C1EBDD28E0060415F /* 测试.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98261EBDD28E0060415F /* 测试.txt */; };
 		BF6F982D1EBDD28E0060415F /* 武道宗师.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98271EBDD28E0060415F /* 武道宗师.txt */; };
 		BF6F982E1EBDD28E0060415F /* 细说明朝.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6F98281EBDD28E0060415F /* 细说明朝.txt */; };
@@ -175,6 +176,7 @@
 		BF4679251EC036F6001DD3FE /* FJBottomMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJBottomMenuView.xib; sourceTree = "<group>"; };
 		BF5278371EC16565004F8954 /* FJCatalogMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FJCatalogMenuController.swift; sourceTree = "<group>"; };
 		BF54F78C1EC2BF4900B0384C /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
+		BF5612601ED7FB8600C17C49 /* 游戏民国.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "游戏民国.txt"; sourceTree = "<group>"; };
 		BF6F98261EBDD28E0060415F /* 测试.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "测试.txt"; sourceTree = "<group>"; };
 		BF6F98271EBDD28E0060415F /* 武道宗师.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "武道宗师.txt"; sourceTree = "<group>"; };
 		BF6F98281EBDD28E0060415F /* 细说明朝.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "细说明朝.txt"; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 		BF71B5091EB95E01004D6774 /* Books */ = {
 			isa = PBXGroup;
 			children = (
+				BF5612601ED7FB8600C17C49 /* 游戏民国.txt */,
 				BF6F98261EBDD28E0060415F /* 测试.txt */,
 				BF6F98271EBDD28E0060415F /* 武道宗师.txt */,
 				BF6F98281EBDD28E0060415F /* 细说明朝.txt */,
@@ -800,6 +803,7 @@
 				BF6F98301EBDD28E0060415F /* 重启霸道人生.txt in Resources */,
 				BF6F982E1EBDD28E0060415F /* 细说明朝.txt in Resources */,
 				5F1FF1941DF7BD5300C77CDE /* Assets.xcassets in Resources */,
+				BF5612611ED7FB8600C17C49 /* 游戏民国.txt in Resources */,
 				BF0AE6B11EB8507E00A07D58 /* Main.storyboard in Resources */,
 				5F1FF2051DF7ED2200C77CDE /* left_liwu.png in Resources */,
 				5F1FF2091DF7F3FA00C77CDE /* head.jpg in Resources */,
